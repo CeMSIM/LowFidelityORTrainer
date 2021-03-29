@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 6adef81ae136e8f48afd8dac327b1e3a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - QuestText: {fileID: 926465341026654528, guid: 8789d7f36d2257e4daeb0fb655c768f4,
+      type: 3}
+  - IntroCanvas: {fileID: 5256379487543619224, guid: 6f681cfe8d1dbe54ba8a867f3b2e5711,
+      type: 3}
+  - Test: {fileID: 3066469408823326283, guid: 12c9d169139dcac46a56d4691b81dff4, type: 3}
+  - Tutorial: {fileID: 6889758095038651665, guid: 760570d9e73eb634f918daabaa4df545,
+      type: 3}
+  - TutorialText: {fileID: 7140191159788010508, guid: ecf5925d1cad64347b511cfa8113f00a,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

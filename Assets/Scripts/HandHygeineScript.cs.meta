@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 73cd6bb65a991fc4fb7902e73b340696
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HandHygeineOptionA: {fileID: 7893283266130882206, guid: 7dba95b69514d3646b7d5cb486bf12ab,
+      type: 3}
+  - HandHygeineOptionB: {fileID: 3577165090108524265, guid: 6f06400cf720a634591921a88a14f19b,
+      type: 3}
+  - HandHygeineOptionC: {fileID: 3953071241297046515, guid: 9fdd32a258f97c34e80a7d1090ccae6c,
+      type: 3}
+  - HandHygeineOptionD: {fileID: 4786875646295075070, guid: db630b9696b52c24388afa05c64702ea,
+      type: 3}
+  - HandHygeineOBA: {fileID: 7526540420547648030, guid: c175c09b7ae166e40830ff316772842d,
+      type: 3}
+  - HandHygeineOBB: {fileID: 709828089328202640, guid: 88428b3e2ad2a2c49ad7fcaa45fc5443,
+      type: 3}
+  - HandHygeineOBC: {fileID: 6523649915964687537, guid: a02c9a7b0c3cecf42a6d2701f3e2bccd,
+      type: 3}
+  - HandHygeineOBD: {fileID: 620933685179918072, guid: 44bbf48b8f9f1a241a4342cf182862f2,
+      type: 3}
+  - exit: {fileID: 6998701648175936112, guid: 3776c65757c8e114eaf2dcc4f7270c07, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

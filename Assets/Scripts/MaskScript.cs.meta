@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 789946f0c0440654ba82e91c9057b472
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MaskOptionA: {fileID: 7893283266130882206, guid: 7dba95b69514d3646b7d5cb486bf12ab,
+      type: 3}
+  - MaskOptionB: {fileID: 3577165090108524265, guid: 6f06400cf720a634591921a88a14f19b,
+      type: 3}
+  - MaskOptionC: {fileID: 3953071241297046515, guid: 9fdd32a258f97c34e80a7d1090ccae6c,
+      type: 3}
+  - MaskOptionD: {fileID: 4786875646295075070, guid: db630b9696b52c24388afa05c64702ea,
+      type: 3}
+  - MaskOBA: {fileID: 7526540420547648030, guid: c175c09b7ae166e40830ff316772842d,
+      type: 3}
+  - MaskOBB: {fileID: 709828089328202640, guid: 88428b3e2ad2a2c49ad7fcaa45fc5443,
+      type: 3}
+  - MaskOBC: {fileID: 6523649915964687537, guid: a02c9a7b0c3cecf42a6d2701f3e2bccd,
+      type: 3}
+  - MaskOBD: {fileID: 620933685179918072, guid: 44bbf48b8f9f1a241a4342cf182862f2,
+      type: 3}
+  - Canvas: {fileID: 4639375427792209672, guid: b9c9846a184170b40b39c14ccb4a0283,
+      type: 3}
+  - Exit: {fileID: 6998701648175936112, guid: 3776c65757c8e114eaf2dcc4f7270c07, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

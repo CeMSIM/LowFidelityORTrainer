@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: 15226d88bec2fac4d9b96edd0817644d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - TutorialQuestText: {fileID: 7140191159788010508, guid: ecf5925d1cad64347b511cfa8113f00a,
+      type: 3}
+  - Exam: {fileID: 98093424237956551, guid: 12c9d169139dcac46a56d4691b81dff4, type: 3}
+  - OptionA: {fileID: 1142457379181738617, guid: 20b2adcf464cc4646b22922251888227,
+      type: 3}
+  - OptionB: {fileID: 246865097701500708, guid: 691e8aad1157268438458e917a756563,
+      type: 3}
+  - OptionC: {fileID: 1168644096994280588, guid: 7ac79b217791ac8419bf38399cd757f4,
+      type: 3}
+  - OptionD: {fileID: 5562974174504276763, guid: 0bf2c97dd97afb741bb1137f138029e3,
+      type: 3}
+  - Exit: {fileID: 7404353740199800755, guid: 580009201a96c0340b4489bf982d7516, type: 3}
+  - AnswerCheck: {fileID: 8691319730146422349, guid: 9bf8fbfda59320b49a8031338dde4d44,
+      type: 3}
+  - HH1Checklist: {fileID: 2083567091250466970, guid: d24a06d9645087344957e89bee15ef6d,
+      type: 3}
+  - N95ONCheck: {fileID: 7979380935348136283, guid: d7406f7d606c8a14bbec5aa658dee824,
+      type: 3}
+  - DHCONCheck: {fileID: 5420606446680510949, guid: ddd86dfc29e407e4d9eb40ba7f8c72bf,
+      type: 3}
+  - EPONCheck: {fileID: 8573752802975205991, guid: c3a1d168d4967064eb0cd9097d98462a,
+      type: 3}
+  - SCONCheck: {fileID: 2643932370996252867, guid: 80a9174140338a041be85801da9935a3,
+      type: 3}
+  - GownONCheck: {fileID: 251278084273137815, guid: abf332f9fbe978543a2b73fde9f83b68,
+      type: 3}
+  - GlovesONCheck: {fileID: 417850366190110497, guid: 6d07c0b9b58f3a44e919833c23b58b9d,
+      type: 3}
+  - SCOFFCheck: {fileID: 7166369434385390859, guid: 35cd0b196ac40a6468afaedf82a39600,
+      type: 3}
+  - GownOFFCheck: {fileID: 836262824630834302, guid: 42fe7446cc62abe46ad57f36276ade6c,
+      type: 3}
+  - GlovesOFFCheck: {fileID: 8518645914030209432, guid: a1596d99a227ca94abfd5b9b5679bcb3,
+      type: 3}
+  - Outside: {fileID: 1819681059442395702, guid: 059fe37d7edaa91429abbd072b8e2cc9,
+      type: 3}
+  - EPOFFCheck: {fileID: 8355685931756561168, guid: e02f959e8b422cc4e8588b40dc317527,
+      type: 3}
+  - HCOFFCheck: {fileID: 8021422965529535593, guid: a28c0799d8dcfd34e850d3ad539d4973,
+      type: 3}
+  - N95OFFCheck: {fileID: 5762612857219037648, guid: 79225f71050b24d4d820dd951db15aa0,
+      type: 3}
+  - HH2Checklist: {fileID: 9164508248950647602, guid: f6e9167bc8d267e4a9f0c87bef1037cf,
+      type: 3}
+  - HH3Checklist: {fileID: 7016141928554387476, guid: 46f523aaa43cf584d8595d6fa81e190c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

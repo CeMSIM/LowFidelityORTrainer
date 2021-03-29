@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 915ececd744dea649ad55406729fb2d0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - N95OptionA: {fileID: 7893283266130882206, guid: 7dba95b69514d3646b7d5cb486bf12ab,
+      type: 3}
+  - N95OptionB: {fileID: 3577165090108524265, guid: 6f06400cf720a634591921a88a14f19b,
+      type: 3}
+  - N95OptionC: {fileID: 3953071241297046515, guid: 9fdd32a258f97c34e80a7d1090ccae6c,
+      type: 3}
+  - N95OptionD: {fileID: 4786875646295075070, guid: db630b9696b52c24388afa05c64702ea,
+      type: 3}
+  - N95OBA: {fileID: 7526540420547648030, guid: c175c09b7ae166e40830ff316772842d,
+      type: 3}
+  - N95OBB: {fileID: 709828089328202640, guid: 88428b3e2ad2a2c49ad7fcaa45fc5443, type: 3}
+  - N95OBC: {fileID: 6523649915964687537, guid: a02c9a7b0c3cecf42a6d2701f3e2bccd,
+      type: 3}
+  - N95OBD: {fileID: 620933685179918072, guid: 44bbf48b8f9f1a241a4342cf182862f2, type: 3}
+  - Canvas: {fileID: 4639375427792209672, guid: b9c9846a184170b40b39c14ccb4a0283,
+      type: 3}
+  - Exit: {fileID: 6998701648175936112, guid: 3776c65757c8e114eaf2dcc4f7270c07, type: 3}
+  - QuestText: {fileID: 926465341026654528, guid: 8789d7f36d2257e4daeb0fb655c768f4,
+      type: 3}
+  - N95Check: {fileID: 7979380935348136283, guid: d7406f7d606c8a14bbec5aa658dee824,
+      type: 3}
+  - MaskCheck: {fileID: 7030311611563551069, guid: 9e6ae3d0f79a7d840b8acce49f07bbf8,
+      type: 3}
+  - GownCheck: {fileID: 251278084273137815, guid: abf332f9fbe978543a2b73fde9f83b68,
+      type: 3}
+  - GlovesCheck: {fileID: 417850366190110497, guid: 6d07c0b9b58f3a44e919833c23b58b9d,
+      type: 3}
+  - HandHygeineCheck: {fileID: 2083567091250466970, guid: d24a06d9645087344957e89bee15ef6d,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
