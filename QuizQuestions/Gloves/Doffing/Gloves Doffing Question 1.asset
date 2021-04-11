@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Name: Gloves Doffing Question 1
+  m_EditorClassIdentifier: 
+  _info: What is the first step in doffing the gloves?
+  _answerA: Have a partner remove one glove
+  _answerB: Using an ungloved hand, rasp the palm area of the gloved hand and peel
+    off the glove
+  _answerC: Have a partner remove both gloves
+  _answerD: Using a gloved hand, rasp the palm area of the other gloved hand and
+    peel off the first glove
+  _questText: Select the correct answer
+  _useTimer: 0
+  _timer: 0
