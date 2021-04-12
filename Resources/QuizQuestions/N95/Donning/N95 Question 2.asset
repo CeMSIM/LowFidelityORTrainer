@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Name: N95 Question 2
+  m_EditorClassIdentifier: 
+  _info: What is the first step in donning the N95 Respirator?
+  _answerA: Place the N95 against your face by cupping the N95 in one hand and then
+    placing it over your nose and mouth
+  _answerB: Place the N95 against your face by cupping the N95 in both hands and
+    then placing it over your nose and mouth
+  _answerC: Invert the mask
+  _answerD: Bend the cusp over your nose
+  _questText: Select the correct answer
+  _useTimer: 0
+  _timer: 0
