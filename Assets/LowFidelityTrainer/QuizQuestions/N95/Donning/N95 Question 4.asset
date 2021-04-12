@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Name: N95 Question 4
+  m_EditorClassIdentifier: 
+  _info: What should you do after the bands are fit?
+  _answerA: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
+    from the bottom (chin)
+  _answerB: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
+    from the top (nose)
+  _answerC: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
+    from cheek to cheek
+  _answerD: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
+    from the top (nose and  bottom (chin)
+  _questText: Select the correct answer
+  _useTimer: 0
+  _timer: 0
