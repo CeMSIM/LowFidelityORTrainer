@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Question 4
   m_EditorClassIdentifier: 
   _info: What should you do after the bands are fit?
@@ -20,7 +20,7 @@ MonoBehaviour:
   _answerC: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
     from cheek to cheek
   _answerD: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
-    from the top (nose and  bottom (chin)
+    from the top (nose) and bottom (chin)
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

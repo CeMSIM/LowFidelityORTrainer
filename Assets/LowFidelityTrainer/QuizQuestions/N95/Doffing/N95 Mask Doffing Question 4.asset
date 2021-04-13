@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Mask Doffing Question 4
   m_EditorClassIdentifier: 
   _info: What should you do if the N95 Mask is not soiled?
   _answerA: Place in the designated wash bin and follow organizational reuse protocol
   _answerB: Discard into a soiled bin
-  _answerC: Place in a designated sterilizing container and follow organization reuse
-    protocols
+  _answerC: Place in a designated sterilizing container and follow organizational
+    reuse protocols
   _answerD: None of the above
   _questText: Select the correct answer
   _useTimer: 0

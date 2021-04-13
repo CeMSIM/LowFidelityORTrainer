@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Mask Doffing Question 1
   m_EditorClassIdentifier: 
   _info: What is the first step in doffing the N95 Respirator?
-  _answerA: Grasp either top ties/ elastics of the mask, followed by the ones on
-    the bottom
-  _answerB: Grasp either bottom ties/ elastics of the mask, followed by the ones
-    on the top
+  _answerA: Grasp either top ties/elastics of the mask, followed by the ones on the
+    bottom
+  _answerB: Grasp either bottom ties/elastics of the mask, followed by the ones on
+    the top
   _answerC: Grasp both ties at the same time
   _answerD: None of the above
   _questText: Select the correct answer

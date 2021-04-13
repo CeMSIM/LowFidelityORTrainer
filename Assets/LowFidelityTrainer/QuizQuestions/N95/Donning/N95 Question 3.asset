@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Question 3
   m_EditorClassIdentifier: 
   _info: What is the next step in donning the N95 Respirator?
@@ -18,7 +18,7 @@ MonoBehaviour:
     elastic bands under the chin
   _answerC: While holding the N95 against your face, the other hand stretches the
     elastic bands over the head and neck
-  _answerD: 'Secure the ear loops or ties/elastic bands at middle of head '
+  _answerD: Secure the ear loops or ties/elastic bands at middle of head
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

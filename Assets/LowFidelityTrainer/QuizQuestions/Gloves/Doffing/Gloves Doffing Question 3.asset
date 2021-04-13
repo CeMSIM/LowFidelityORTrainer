@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Gloves Doffing Question 3
   m_EditorClassIdentifier: 
-  _info: What is done once the first glove is removed
+  _info: What is done once the first glove is removed?
   _answerA: Slide fingers of ungloved hand under the remaining glove at the wrist
     and peel off the second glove over the first
   _answerB: Peel the glove off from the top using the ungloved hand

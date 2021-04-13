@@ -7396,43 +7396,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6209a11f938249948bbf7a9a67ba47db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 0}
-  HH1: {fileID: 0}
-  HH2: {fileID: 0}
-  N951: {fileID: 0}
-  N952: {fileID: 0}
-  N953: {fileID: 0}
-  N954: {fileID: 0}
-  N955: {fileID: 0}
-  HC1: {fileID: 0}
-  EP1: {fileID: 0}
-  SC1: {fileID: 0}
-  Gown1: {fileID: 0}
-  Gown2: {fileID: 0}
-  Gloves1: {fileID: 0}
-  Gloves2: {fileID: 0}
-  DonF: {fileID: 0}
-  SCDoff1: {fileID: 0}
-  GownDoff1: {fileID: 0}
-  GownDoff2: {fileID: 0}
-  GownDoff3: {fileID: 0}
-  GownDoff4: {fileID: 0}
-  GlovesDoff1: {fileID: 0}
-  GlovesDoff2: {fileID: 0}
-  GlovesDoff3: {fileID: 0}
-  GlovesDoff4: {fileID: 0}
-  GlovesDoff5: {fileID: 0}
-  HH3: {fileID: 0}
-  EPDoff1: {fileID: 0}
-  HCDoff1: {fileID: 0}
-  N95Doff1: {fileID: 0}
-  N95Doff2: {fileID: 0}
-  N95Doff3: {fileID: 0}
-  N95Doff4: {fileID: 0}
-  N95Doff5: {fileID: 0}
-  End: {fileID: 0}
+  test: {fileID: 11400000, guid: 7c56ed3725368b845bce82d93ba9635d, type: 2}
+  HH1: {fileID: 11400000, guid: db526b77efa4f794388cf37a39409b9a, type: 2}
+  HH2: {fileID: 11400000, guid: 1f5ed3df86277584bb1c32deeac31cb8, type: 2}
+  N951: {fileID: 11400000, guid: 7785c69998a2a6249a0750b3c59a8374, type: 2}
+  N952: {fileID: 11400000, guid: a179789f1c71947499870badc4d95503, type: 2}
+  N953: {fileID: 11400000, guid: 53bd25becf89fc340a43092fdd7d2b36, type: 2}
+  N954: {fileID: 11400000, guid: 2fb7d183152211a4a849a387cabfa1ff, type: 2}
+  N955: {fileID: 11400000, guid: e7bea3c50cdf0404a98f5b2e976aea46, type: 2}
+  HC1: {fileID: 11400000, guid: 911e5775c95ff554f957f567e8a4e86d, type: 2}
+  EP1: {fileID: 11400000, guid: 19ede09d95f80e5438f7f3ed8c6ba2cd, type: 2}
+  SC1: {fileID: 11400000, guid: 76a2e68727ccbce4f9b25352f8df2c89, type: 2}
+  Gown1: {fileID: 11400000, guid: 13874274496a90d4c911eccdc68af139, type: 2}
+  Gown2: {fileID: 11400000, guid: 12b76c8dfffdbb647ae8a9636cfba5d6, type: 2}
+  Gloves1: {fileID: 11400000, guid: 9a6b40027ab638b478f531f1de736a5d, type: 2}
+  Gloves2: {fileID: 11400000, guid: 14a6b60b085f531499a86fc068b48c80, type: 2}
+  DonF: {fileID: 11400000, guid: 84b8647798f37b448820a5a3859651ea, type: 2}
+  SCDoff1: {fileID: 11400000, guid: 1c4081d98de61f040bee0ed23e48d31e, type: 2}
+  GownDoff1: {fileID: 11400000, guid: 439b5f8cf6ffff54dbaa71528d84741a, type: 2}
+  GownDoff2: {fileID: 11400000, guid: e81e9a4b1260d13439251c4164e48ec0, type: 2}
+  GownDoff3: {fileID: 11400000, guid: b54cd35ef68acda4f9c32a56f7ace72a, type: 2}
+  GownDoff4: {fileID: 11400000, guid: 6a7f98dfa17d2ce4dae76b6a7aab5366, type: 2}
+  GlovesDoff1: {fileID: 11400000, guid: eb0be6092194685439d2a0a8cbf10e29, type: 2}
+  GlovesDoff2: {fileID: 11400000, guid: d7e800e07498f614ab657eaaf3077876, type: 2}
+  GlovesDoff3: {fileID: 11400000, guid: 692810bf45897164a9819841f7574688, type: 2}
+  GlovesDoff4: {fileID: 11400000, guid: 7828ea10522f1a84e88900262ed0b9ba, type: 2}
+  GlovesDoff5: {fileID: 11400000, guid: 9451be736d7dd9f46adc2e4f5247c9cc, type: 2}
+  HH3: {fileID: 11400000, guid: 15c74d7806f801b48b8f484abdc8c265, type: 2}
+  EPDoff1: {fileID: 11400000, guid: 8aeed34d6174614408e3f9942a4fe918, type: 2}
+  HCDoff1: {fileID: 11400000, guid: 1725fa813003157469a36f1e567e6a4e, type: 2}
+  N95Doff1: {fileID: 11400000, guid: 504a870be3d18b441b2f5977faabab20, type: 2}
+  N95Doff2: {fileID: 11400000, guid: 61ffa7a3e6b5b2849ba30c0f4a8b9efb, type: 2}
+  N95Doff3: {fileID: 11400000, guid: 9baf10e266f66d7419027f3429f8f6a1, type: 2}
+  N95Doff4: {fileID: 11400000, guid: f33d501c5081027419881a61f6f0eb6c, type: 2}
+  N95Doff5: {fileID: 11400000, guid: 5989f2237d4b8294590da17fe7f50713, type: 2}
+  End: {fileID: 11400000, guid: 8cd2207b799f1254b93fce66f175b260, type: 2}
   ChoicesInt: 0
-  AnswerButtons: {fileID: 0}
+  AnswerButtons: {fileID: 104428049}
   uIElements:
     questionInfoTextObject: {fileID: 0}
     answerAInfoTextObject: {fileID: 0}
@@ -7445,14 +7445,21 @@ MonoBehaviour:
   AnswersArrayC: []
   AnswersArrayD: []
   HH1Check: {fileID: 1295204793}
-  N95DonCheck: {fileID: 0}
-  HCDonCheck: {fileID: 0}
-  EPDonCheck: {fileID: 0}
-  SCDonCheck: {fileID: 0}
-  GownDonCheck: {fileID: 0}
-  HH2Check: {fileID: 0}
-  GlovesDonCheck: {fileID: 0}
-  SCDoffCheck: {fileID: 0}
+  N95DonCheck: {fileID: 1195289558}
+  HCDonCheck: {fileID: 1540038745}
+  EPDonCheck: {fileID: 914954707}
+  SCDonCheck: {fileID: 1906070923}
+  GownDonCheck: {fileID: 1557180968}
+  HH2Check: {fileID: 1357009080}
+  GlovesDonCheck: {fileID: 1267708145}
+  SCDoffCheck: {fileID: 449400010}
+  GownDoffCheck: {fileID: 211983116}
+  GlovesDoffCheck: {fileID: 1365701109}
+  Anteroom: {fileID: 1834457281}
+  HH3Check: {fileID: 993783841}
+  EPDoffCheck: {fileID: 1201597556}
+  HCDoffCheck: {fileID: 1513855302}
+  N95DoffCheck: {fileID: 694350370}
 --- !u!4 &2060140744
 Transform:
   m_ObjectHideFlags: 0

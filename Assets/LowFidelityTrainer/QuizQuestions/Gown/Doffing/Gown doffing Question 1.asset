@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3236e0ade1a9c4c935613533ecaea8, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Gown doffing Question 1
   m_EditorClassIdentifier: 
-  _info: What is the first step in reomving the gown?
-  _answerA: Roll up your sleeves
+  _info: What is the first step in removing the gown?
+  _answerA: Roll up your sleeve
   _answerB: Carefully pull the gown off you, without touching your body with the
     outside
-  _answerC: Unfasten the gown ties, taking care that sleeves don't contact your body
+  _answerC: Unfaste the gown ties, taking care that sleeves don't contact your body
     when reaching for ties
   _answerD: Fold the gown upwards
   _questText: Select the correct answer

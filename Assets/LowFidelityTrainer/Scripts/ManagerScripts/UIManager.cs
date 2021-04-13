@@ -40,6 +40,7 @@ public struct UIElements
 
 public class UIManager : MonoBehaviour
 {
+    
     public QuestionsManager test;
 
     public QuestionsManager HH1;
@@ -116,7 +117,15 @@ public class UIManager : MonoBehaviour
     [Space]
     [Space]
     public GameObject SCDoffCheck;
+    public GameObject GownDoffCheck;
+    public GameObject GlovesDoffCheck;
+    public GameObject Anteroom;
+    public GameObject HH3Check;
+    public GameObject EPDoffCheck;
+    public GameObject HCDoffCheck;
+    public GameObject N95DoffCheck;
 
+    
 
 
     private void Start()
@@ -273,14 +282,6 @@ public class UIManager : MonoBehaviour
         }
 
 
-        if (uIElements.AnswerAInfoTextObject.text == "")
-        {
-            AnswerButtons.gameObject.SetActive(false);
-        }
-       else
-        {
-            AnswerButtons.gameObject.SetActive(true);
-        }
 
         if (ChoicesInt > 15)
         {
@@ -290,6 +291,85 @@ public class UIManager : MonoBehaviour
         else
         {
             SCDoffCheck.gameObject.SetActive(false);
+        }
+
+
+        if (ChoicesInt > 19)
+        {
+            GownDoffCheck.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            GownDoffCheck.gameObject.SetActive(false);
+        }
+
+
+        if (ChoicesInt > 24)
+        {
+            GlovesDoffCheck.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            GlovesDoffCheck.gameObject.SetActive(false);
+        }
+
+
+        if (ChoicesInt > 25)
+        {
+            HH3Check.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            HH3Check.gameObject.SetActive(false);
+        }
+
+
+
+        if (ChoicesInt > 26)
+        {
+            EPDoffCheck.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            EPDoffCheck.gameObject.SetActive(false);
+        }
+
+
+        if (ChoicesInt > 27)
+        {
+            HCDoffCheck.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            HCDoffCheck.gameObject.SetActive(false);
+        }
+
+
+        if (ChoicesInt > 32)
+        {
+            N95DoffCheck.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            N95DoffCheck.gameObject.SetActive(false);
+        }
+
+
+
+
+        if (uIElements.AnswerAInfoTextObject.text == "")
+        {
+            AnswerButtons.gameObject.SetActive(false);
+        }
+        else
+        {
+            AnswerButtons.gameObject.SetActive(true);
         }
 
 
