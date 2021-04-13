@@ -437,12 +437,13 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsHH()
     {
-        if (uIElements.QuestTextObject.text == "Welcome to the Vortex Simulator! Please select the first step in PPE donning, Hand Hygeine")
+        
+        if (uIElements.QuestTextObject.text == "Welcome to the Vortex Simulator! Please select the first step in PPE donning, Hand Hygiene")
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Gloves properly doffed, move to an outside room and select Hand Hygeine to wash your hands")
+        if (uIElements.QuestTextObject.text == "Gloves properly doffed, move to an outside room and select Hand Hygiene to wash your hands")
         {
             ChoicesInt += 1;
         }
@@ -494,12 +495,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsSC()
     {
-        if (uIElements.QuestTextObject.text == "Select the next PPE item to don, the Shoes Covers")
+        if (uIElements.QuestTextObject.text == "Select the next PPE item to don, the Shoe Covers")
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Donning completed, now move onto the doffing sequence. Select the first item of PPE doffing, the shoe covers")
+        if (uIElements.QuestTextObject.text == "Donning completed, now move onto the doffing sequence. Select the first item of PPE doffing, the Shoe Covers")
         {
             ChoicesInt += 1;
         }
@@ -520,7 +521,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsHH2()
     {
-        if (uIElements.QuestTextObject.text == "Select the  next item of PPE donning, Hand Hygeine")
+        if (uIElements.QuestTextObject.text == "Select the next item of PPE donning, Hand Hygiene")
         {
             ChoicesInt += 1;
         }

@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsSC
         m_Mode: 1
         m_Arguments:
@@ -288,7 +288,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 841429763}
+  - {fileID: 866174534}
   m_Father: {fileID: 104428050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsB
         m_Mode: 1
         m_Arguments:
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsN95
         m_Mode: 1
         m_Arguments:
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsA
         m_Mode: 1
         m_Arguments:
@@ -2813,7 +2813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsD
         m_Mode: 1
         m_Arguments:
@@ -3000,34 +3000,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809090322}
   m_CullTransparentMesh: 0
---- !u!1 &841429762
+--- !u!1 &866174533
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9127410348386453463, guid: 18bb96decd3e95446a8e7b800b6e68b1,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 841429763}
-  - component: {fileID: 841429765}
-  - component: {fileID: 841429764}
+  - component: {fileID: 866174534}
+  - component: {fileID: 866174535}
+  - component: {fileID: 866174536}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &841429763
+--- !u!224 &866174534
 RectTransform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9127410348386453462, guid: 18bb96decd3e95446a8e7b800b6e68b1,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841429762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 866174533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3036,17 +3034,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &841429764
-MonoBehaviour:
+--- !u!222 &866174535
+CanvasRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9127410348386453461, guid: 18bb96decd3e95446a8e7b800b6e68b1,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841429762}
+  m_GameObject: {fileID: 866174533}
+  m_CullTransparentMesh: 0
+--- !u!114 &866174536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866174533}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -3128,15 +3133,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &841429765
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9127410348386453460, guid: 18bb96decd3e95446a8e7b800b6e68b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841429762}
-  m_CullTransparentMesh: 0
 --- !u!1 &914954707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,7 +3492,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsEP
         m_Mode: 1
         m_Arguments:
@@ -5392,7 +5388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsHH
         m_Mode: 1
         m_Arguments:
@@ -5403,7 +5399,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsHH2
         m_Mode: 1
         m_Arguments:
@@ -6020,7 +6016,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsGloves
         m_Mode: 1
         m_Arguments:
@@ -6155,7 +6151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsC
         m_Mode: 1
         m_Arguments:
@@ -6804,7 +6800,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: Undo
         m_Mode: 1
         m_Arguments:
@@ -7043,7 +7039,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsHC
         m_Mode: 1
         m_Arguments:
@@ -7434,16 +7430,41 @@ MonoBehaviour:
   ChoicesInt: 0
   AnswerButtons: {fileID: 104428049}
   uIElements:
-    questionInfoTextObject: {fileID: 0}
-    answerAInfoTextObject: {fileID: 0}
-    answerBInfoTextObject: {fileID: 0}
-    answerCInfoTextObject: {fileID: 0}
-    answerDInfoTextObject: {fileID: 0}
-    questTextObject: {fileID: 0}
-  AnswersArrayA: []
-  AnswersArrayB: []
-  AnswersArrayC: []
-  AnswersArrayD: []
+    questionInfoTextObject: {fileID: 130941676}
+    answerAInfoTextObject: {fileID: 2040954321}
+    answerBInfoTextObject: {fileID: 866174536}
+    answerCInfoTextObject: {fileID: 285290153}
+    answerDInfoTextObject: {fileID: 212970831}
+    questTextObject: {fileID: 1360898386}
+  AnswersArrayA:
+  - Make sure both the mouth and nose are covered
+  - Place the N95 against your face by cupping the N95 in one hand and then placing
+    it over your nose and mouth
+  - Fully cover torso from neck to knees
+  - Slide fingers of ungloved hand under the remaining glove at the wrist and peel
+    off the second glove over the first
+  AnswersArrayB:
+  - 2
+  - Hold removed glove in gloved hand
+  - Grasp either bottom ties/elastics of the mask, followed by the ones on the top
+  AnswersArrayC:
+  - While holding the N95 against your face, the other hand stretches the elastic
+    bands over the head and neck
+  - Unfaste the gown ties, taking care that sleeves don't contact your body when
+    reaching for ties
+  - Pull gown away from neck and shoulders, touching outside of gown only
+  - The patient room
+  - Discard into a waste container if soiled
+  - Place in a designated sterilizing container and follow organizational reuse protocols
+  AnswersArrayD:
+  - You ensure the N95 fits snuggly and confirm you cannot feel air escaping from
+    the top (nose) and bottom (chin)
+  - Extend to cover wrist of isolatioin gown
+  - Fold or roll into a bundle, touching only the outside of the gown with gloved
+    hands, and discard in the soiled bin in the patient room
+  - Using a gloved hand, rasp the palm area of the other gloved hand and peel off
+    the first glove
+  - Remove without touching the front
   HH1Check: {fileID: 1295204793}
   N95DonCheck: {fileID: 1195289558}
   HCDonCheck: {fileID: 1540038745}
@@ -7751,7 +7772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2060140743}
         m_MethodName: ChangeOptionsGown
         m_Mode: 1
         m_Arguments:
