@@ -132,7 +132,9 @@ public class UIManager : MonoBehaviour
     public int y;
     private void Start()
     {
+        AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "";
 
+        BG.gameObject.SetActive(false);
         y = 0;
         EPDonCheck.gameObject.SetActive(false);
         ChoicesInt = 0;
@@ -200,7 +202,6 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            BG.gameObject.SetActive(false);
         
             HH1Check.gameObject.SetActive(false);
         }
@@ -369,7 +370,10 @@ public class UIManager : MonoBehaviour
         }
 
 
-
+        if (ChoicesInt > 33)
+        {
+            BG.gameObject.SetActive(true);
+        }
 
         if (uIElements.AnswerAInfoTextObject.text == "")
         {
@@ -398,11 +402,13 @@ public class UIManager : MonoBehaviour
             {
                 y += 1;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
                 ChoicesInt += 1;
             }
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
             }
 
             
@@ -417,17 +423,21 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerBInfoTextObject.text == AnswersArrayB[i])
             {
-                y += 1;
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
+                y += 1;
+               
+    
                 ChoicesInt += 1;
             }
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
             }
         }
 
-
+        y = 0;
     }
 
     public void ChangeOptionsC()
@@ -436,18 +446,21 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerCInfoTextObject.text == AnswersArrayC[i])
             {
-                y += 1;
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
+                y += 1;
+                
+                
                 ChoicesInt += 1;
             }
 
             if (y< 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
             }
         }
-
-
+        y = 0;
     }
 
     public void ChangeOptionsD()
@@ -456,18 +469,21 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerDInfoTextObject.text == AnswersArrayD[i])
             {
-                y += 1;
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
+                y += 1;
+               
+                
                 ChoicesInt += 1;
             }
 
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
+                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
             }
         }
-
-
+        y = 0;
     }
 
 
