@@ -34,7 +34,7 @@ public class FinalScreenManager : MonoBehaviour
     {
         z = 0;
         UI = Managers.GetComponent<UIManager>();
-        yVector = 600;
+        //yVector = 600;
        // Debug.Log(GameObject.FindGameObjectWithTag("ResultsCanvas"));
         //GameObject x12 =  GameObject.Instantiate(WrongQuestion, new Vector3(0, 0, 0), Quaternion.identity, GameObject.FindGameObjectWithTag("ResultsCanvas").transform);
 
