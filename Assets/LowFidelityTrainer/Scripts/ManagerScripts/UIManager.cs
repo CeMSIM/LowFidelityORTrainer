@@ -19,6 +19,8 @@ public struct UIManagerParameters
 [System.Serializable]
 public struct UIElements
 {
+    
+
     [SerializeField] TextMeshProUGUI questionInfoTextObject;
     public TextMeshProUGUI QuestionInfoTextObject { get { return questionInfoTextObject; } }
 
@@ -40,7 +42,7 @@ public struct UIElements
 
 public class UIManager : MonoBehaviour
 {
-    
+    public int stop;
     public QuestionsManager test;
 
     public QuestionsManager HH1;
@@ -98,7 +100,7 @@ public class UIManager : MonoBehaviour
 
     public int ChoicesInt;
     public GameObject AnswerButtons;
-    private QuestionsManager[] TextInfo;
+    public QuestionsManager[] TextInfo;
     [SerializeField] UIElements uIElements;
     public string[] AnswersArrayA;
     public string[] AnswersArrayB;
@@ -132,6 +134,7 @@ public class UIManager : MonoBehaviour
     public int y;
     private void Start()
     {
+        stop = 0;
         AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "";
 
         BG.gameObject.SetActive(false);
@@ -385,13 +388,16 @@ public class UIManager : MonoBehaviour
         }
 
 
+        if (stop == 0)
+        {
+            uIElements.QuestionInfoTextObject.text = TextInfo[ChoicesInt].Info;
+            uIElements.AnswerAInfoTextObject.text = TextInfo[ChoicesInt].AnswerA;
+            uIElements.AnswerBInfoTextObject.text = TextInfo[ChoicesInt].AnswerB;
+            uIElements.AnswerCInfoTextObject.text = TextInfo[ChoicesInt].AnswerC;
+            uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
+            uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
+        }
 
-        uIElements.QuestionInfoTextObject.text = TextInfo[ChoicesInt].Info;
-        uIElements.AnswerAInfoTextObject.text = TextInfo[ChoicesInt].AnswerA;
-        uIElements.AnswerBInfoTextObject.text = TextInfo[ChoicesInt].AnswerB;
-        uIElements.AnswerCInfoTextObject.text = TextInfo[ChoicesInt].AnswerC;
-        uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
-        uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
     }
 
     public void ChangeOptionsA()
