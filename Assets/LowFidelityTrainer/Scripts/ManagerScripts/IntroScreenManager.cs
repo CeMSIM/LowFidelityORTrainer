@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class IntroScreenManager : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class IntroScreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (UI.stop == 1)
+        {
+            UI.AnswerCheck.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+
     }
 
     public void ActivateTutorial()
@@ -36,6 +41,7 @@ public class IntroScreenManager : MonoBehaviour
     {
         
         IntroScreen.gameObject.SetActive(false);
+        
         //Tutorial_Track.gameObject.SetActive(false);
         UI.stop = 1;
     }

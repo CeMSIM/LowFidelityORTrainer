@@ -198,195 +198,197 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (ChoicesInt > 0)
+        if (stop == 0)
         {
-            HH1Check.gameObject.SetActive(true);
-            
+            if (ChoicesInt > 0)
+            {
+                HH1Check.gameObject.SetActive(true);
+
+            }
+            else
+            {
+
+                HH1Check.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 5)
+            {
+                N95DonCheck.gameObject.SetActive(true);
+
+            }
+            else
+            {
+                N95DonCheck.gameObject.SetActive(false);
+            }
+
+            if (ChoicesInt > 6)
+            {
+                HCDonCheck.gameObject.SetActive(true);
+            }
+
+
+
+            else
+            {
+                HCDonCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 7)
+            {
+                EPDonCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                EPDonCheck.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 8)
+            {
+                SCDonCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                SCDonCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 10)
+            {
+                GownDonCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                GownDonCheck.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 11)
+            {
+                HH2Check.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                HH2Check.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 14)
+            {
+                GlovesDonCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                GlovesDonCheck.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 15)
+            {
+                SCDoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                SCDoffCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 19)
+            {
+                GownDoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                GownDoffCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 24)
+            {
+                Anteroom.gameObject.SetActive(true);
+                GlovesDoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                GlovesDoffCheck.gameObject.SetActive(false);
+                Anteroom.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 25)
+            {
+                HH3Check.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                HH3Check.gameObject.SetActive(false);
+            }
+
+
+
+            if (ChoicesInt > 26)
+            {
+                EPDoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                EPDoffCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 27)
+            {
+                HCDoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                HCDoffCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 32)
+            {
+                N95DoffCheck.gameObject.SetActive(true);
+            }
+
+            else
+            {
+                N95DoffCheck.gameObject.SetActive(false);
+            }
+
+
+            if (ChoicesInt > 33)
+            {
+                BG.gameObject.SetActive(true);
+            }
         }
-        else
-        {
+            if (uIElements.AnswerAInfoTextObject.text == "")
+            {
+                AnswerButtons.gameObject.SetActive(false);
+            }
+            else
+            {
+                AnswerButtons.gameObject.SetActive(true);
+            }
         
-            HH1Check.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 5)
-        {
-            N95DonCheck.gameObject.SetActive(true);
-
-        }
-        else
-        {
-            N95DonCheck.gameObject.SetActive(false);
-        }
-
-        if (ChoicesInt > 6)
-        {
-            HCDonCheck.gameObject.SetActive(true);
-        }
-
-
-
-        else
-        {
-            HCDonCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 7)
-        {
-            EPDonCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            EPDonCheck.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 8)
-        {
-            SCDonCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            SCDonCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 10)
-        {
-            GownDonCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            GownDonCheck.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 11)
-        {
-            HH2Check.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            HH2Check.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 14)
-        {
-            GlovesDonCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            GlovesDonCheck.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 15)
-        {
-            SCDoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            SCDoffCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 19)
-        {
-            GownDoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            GownDoffCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 24)
-        {
-            Anteroom.gameObject.SetActive(true);
-            GlovesDoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            GlovesDoffCheck.gameObject.SetActive(false);
-            Anteroom.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 25)
-        {
-            HH3Check.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            HH3Check.gameObject.SetActive(false);
-        }
-
-
-
-        if (ChoicesInt > 26)
-        {
-            EPDoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            EPDoffCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 27)
-        {
-            HCDoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            HCDoffCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 32)
-        {
-            N95DoffCheck.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            N95DoffCheck.gameObject.SetActive(false);
-        }
-
-
-        if (ChoicesInt > 33)
-        {
-            BG.gameObject.SetActive(true);
-        }
-
-        if (uIElements.AnswerAInfoTextObject.text == "")
-        {
-            AnswerButtons.gameObject.SetActive(false);
-        }
-        else
-        {
-            AnswerButtons.gameObject.SetActive(true);
-        }
-
 
         if (stop == 0)
         {
