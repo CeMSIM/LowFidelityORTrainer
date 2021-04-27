@@ -32,15 +32,12 @@ public class FinalScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Integer used to identif if an answer is incorrect
         z = 0;
+        //Accessing the UIManager script
         UI = Managers.GetComponent<UIManager>();
-        //yVector = 600;
-       // Debug.Log(GameObject.FindGameObjectWithTag("ResultsCanvas"));
-        //GameObject x12 =  GameObject.Instantiate(WrongQuestion, new Vector3(0, 0, 0), Quaternion.identity, GameObject.FindGameObjectWithTag("ResultsCanvas").transform);
-
-        //  GameObject y = GameObject.FindGameObjectWithTag("ResultsCanvas");
-        Debug.Log(QuestText.GetComponentInParent<TextMeshProUGUI>().text);
         
+
 
     }
 
@@ -52,32 +49,15 @@ public class FinalScreenManager : MonoBehaviour
  
     }
 
-    public void SpawnWrongQuestion()
-    {
-        
-        if (AnswerCheckText.GetComponent<TextMeshProUGUI>().text == "Wrong")
-        {
-            for (int i = 0; i < 1; i++)
-            {
-               // Debug.Log(QuestText.GetComponentInParent<TextMeshProUGUI>().text);
-                WrongQuestion.GetComponentInChildren<TextMeshProUGUI>().text = QuestText.GetComponentInParent<TextMeshProUGUI>().text;
-                GameObject.Instantiate(WrongQuestion, new Vector3(850, yVector, 0), Quaternion.identity, FinalCanvas.transform);
-
-            }
-            yVector -= 75;
-            x += 1;
-        }
-    }
 
 
 
 
+    //Checking the answers picked and changing the corresponding final screen text to red if wrong
 
     public void FinalCheckA()
-    {
-        Debug.Log(OptionsA[0].GetComponentInChildren<TextMeshProUGUI>().text);
-        // Debug.Log(AnswerCText.GetComponentInParent<TextMeshProUGUI>().text);
-        // Debug.Log(UI.AnswersArrayC[1]);
+    { 
+
 
         for (int i = 0; i < UI.AnswersArrayA.Length; i++)
         {
@@ -103,9 +83,7 @@ public class FinalScreenManager : MonoBehaviour
 
     public void FinalCheckB()
     {
-        //Debug.Log(OptionsA[0].GetComponentInChildren<TextMeshProUGUI>().text);
-        // Debug.Log(AnswerCText.GetComponentInParent<TextMeshProUGUI>().text);
-        // Debug.Log(UI.AnswersArrayC[1]);
+       
 
         for (int i = 0; i < UI.AnswersArrayB.Length; i++)
         {
@@ -128,9 +106,8 @@ public class FinalScreenManager : MonoBehaviour
     }
     public void FinalCheckC()
     {
-        Debug.Log(OptionsC[0].GetComponentInChildren<TextMeshProUGUI>().text);
-       // Debug.Log(AnswerCText.GetComponentInParent<TextMeshProUGUI>().text);
-       // Debug.Log(UI.AnswersArrayC[1]);
+        
+
         
         for (int i = 0; i < 6; i++)
         {
@@ -156,9 +133,7 @@ public class FinalScreenManager : MonoBehaviour
 
     public void FinalCheckD()
     {
-        //Debug.Log(OptionsD[0].GetComponentInChildren<TextMeshProUGUI>().text);
-        // Debug.Log(AnswerCText.GetComponentInParent<TextMeshProUGUI>().text);
-        // Debug.Log(UI.AnswersArrayC[1]);
+ 
 
         for (int i = 0; i < UI.AnswersArrayD.Length; i++)
         {

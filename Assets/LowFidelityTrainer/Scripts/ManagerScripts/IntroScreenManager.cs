@@ -15,12 +15,14 @@ public class IntroScreenManager : MonoBehaviour
     public UIManager UI;
     void Start()
     {
+        //Acessing the UIManager Script
         UI = Manager.GetComponent<UIManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Making the answer check blank for exam mode
         if (UI.stop == 1)
         {
             UI.AnswerCheck.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -28,8 +30,10 @@ public class IntroScreenManager : MonoBehaviour
 
     }
 
+    //Functions to activate the chosen quiz mode
     public void ActivateTutorial()
     {
+
         Tutorial_Track.gameObject.SetActive(true);
         IntroScreen.gameObject.SetActive(false);
         Exam_Track.gameObject.SetActive(false);

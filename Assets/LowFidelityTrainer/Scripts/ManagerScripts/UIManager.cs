@@ -8,14 +8,8 @@ using TMPro;
 using System.IO;
 using UnityEngine.EventSystems;
 
-[Serializable()]
-public struct UIManagerParameters
-{
-    [Header("Answers Options")]
-    [SerializeField] float margins;
-    public float Margins { get { return margins; } }
-}
 
+//Creating a struct for the different text objects
 [System.Serializable]
 public struct UIElements
 {
@@ -134,13 +128,17 @@ public class UIManager : MonoBehaviour
     public int y;
     private void Start()
     {
+        //Integer used to prevent UIManager and ExamUIManager from conflicting
         stop = 0;
+        //Make the answer check initially blank
         AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "";
-
+        //Setting the final screen to false and creating ints for question changes
         BG.gameObject.SetActive(false);
         y = 0;
-        EPDonCheck.gameObject.SetActive(false);
+        
         ChoicesInt = 0;
+
+        //Adding the scriptable objects to the array
         TextInfo = new QuestionsManager[35];
         TextInfo[0] = test;
         TextInfo[1] = HH1;
@@ -198,6 +196,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        //Settinng the respective cecklist game objects to true once the PPE object is donned or doffed
         if (stop == 0)
         {
             if (ChoicesInt > 0)
@@ -389,7 +388,7 @@ public class UIManager : MonoBehaviour
                 AnswerButtons.gameObject.SetActive(true);
             }
         
-
+            //Makes sure the questions change due to choices int only if in tutorial mode
         if (stop == 0)
         {
             uIElements.QuestionInfoTextObject.text = TextInfo[ChoicesInt].Info;
@@ -404,6 +403,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsA()
     {
+        //Functions for changing options and changing the check text
         for (int i = 0; i < AnswersArrayA.Length; i++)
         {
             if (uIElements.AnswerAInfoTextObject.text == AnswersArrayA[i])
@@ -494,7 +494,7 @@ public class UIManager : MonoBehaviour
         y = 0;
     }
 
-
+    //Functions only allow the payer to go from PPE to PPE if the correct item is selected
     public void ChangeOptionsHH()
     {
         
@@ -600,11 +600,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //Goes back one question
     public void Undo()
     {
         ChoicesInt -= 1;
     }
 
+    //Resets the questions to the beginning
     public void Reset()
     {
         ChoicesInt = 0;

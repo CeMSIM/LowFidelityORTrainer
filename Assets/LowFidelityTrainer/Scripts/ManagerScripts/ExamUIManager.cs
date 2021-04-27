@@ -28,9 +28,9 @@ public class ExamUIManager : MonoBehaviour
     void Start()
     {
         
-        //TextInfo = new QuestionsManager[35];
+        //Accesing the UIManager Script
         UI = Managers.GetComponent<UIManager>();
-        //l = Managers.GetComponent<UIElements>();
+        
         
         ExamChoicesInt = 0;
 
@@ -40,15 +40,13 @@ public class ExamUIManager : MonoBehaviour
   
 
         
-        Debug.Log(AnswerAText.GetComponentInParent<TextMeshProUGUI>().text);
-        
-        //Debug.Log(l.QuestionInfoTextObject.text = TextInfo[4].Info);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(UI.TextInfo[ExamChoicesInt].Info);
+        //Setting the answer choices and infotexts to the array of scriptable objects
 
         QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].Info;
         AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerA;
@@ -57,14 +55,14 @@ public class ExamUIManager : MonoBehaviour
         AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerD;
         QuestText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].QuestText;
 
-
+        //Displays the Results Screen once the PPE is completely doffed
         if (ExamChoicesInt > 33)
         {
             UI.BG.gameObject.SetActive(true);
         }
 
 
-
+        //Settinng the respective cecklist game objects to true once the PPE object is donned or doffed
         if (ExamChoicesInt > 0)
         {
             UI.HH1Check.gameObject.SetActive(true);
@@ -242,6 +240,8 @@ public class ExamUIManager : MonoBehaviour
 
     }
 
+
+    //Functions to manage the choices
     public void ChangeExamOptions()
     {
         ExamChoicesInt += 1;
