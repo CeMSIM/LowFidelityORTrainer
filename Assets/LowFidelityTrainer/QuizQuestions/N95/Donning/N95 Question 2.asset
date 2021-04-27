@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: N95 Question 2
   m_EditorClassIdentifier: 
   _info: What is the first step in donning the N95 Respirator?
-  _answerA: Place the N95 against your face by cupping the N95 in one hand and then
+  _answerA: Place the N95 against your face by cupping the N95 in ONE hand and then
     placing it over your nose and mouth
-  _answerB: Place the N95 against your face by cupping the N95 in both hands and
+  _answerB: Place the N95 against your face by cupping the N95 in BOTH hands and
     then placing it over your nose and mouth
   _answerC: Invert the mask
   _answerD: Bend the cusp over your nose

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Gown Doffing Question 2
   m_EditorClassIdentifier: 
   _info: How should the gown be removed?
-  _answerA: Pull gown towards neck and shoulders, touching outside of gown only
-  _answerB: Pull gown towards neck and shoulders, touching inside of gown only
-  _answerC: Pull gown away from neck and shoulders, touching outside of gown only
-  _answerD: Pull gown away from neck and shoulders, touching inside of gown only
+  _answerA: Pull gown TOWARDS neck and shoulders, touching OUTSIDE of gown only
+  _answerB: Pull gown TOWARDS neck and shoulders, touching INSIDE of gown only
+  _answerC: Pull gown AWAY from neck and shoulders, touching OUTSIDE of gown only
+  _answerD: Pull gown AWAY from neck and shoulders, touching INSIDE of gown only
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: Gown Doffing Question 3
   m_EditorClassIdentifier: 
   _info: What should you do after the gown is removed?
-  _answerA: Fold or roll into a bundle and discard in the soiled bin in the operating
-    room
-  _answerB: Fold or roll into a bundle, touching only the outside of the gown with
-    gloved hands, and discard in the soiled bin in the trash room
-  _answerC: Fold or roll into a bundle, touching only the outside of the gown with
-    gloved hands, and toss into a near by wash bin
-  _answerD: Fold or roll into a bundle, touching only the outside of the gown with
-    gloved hands, and discard in the soiled bin in the patient room
+  _answerA: Fold or roll the gown into a bundle and then drop it it on the floor
+  _answerB: Fold or roll the gown and discard it into the same bin as soiled linens
+  _answerC: Fold or roll the gown into a bundle touching only the OUTSIDE of the
+    gown
+  _answerD: Fold or roll the gown INSIDE OUT into a bundle, and discard in an appropriately
+    labelled bin INSIDE the patient room/OR
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

@@ -15,8 +15,8 @@ MonoBehaviour:
   _info: How far should the gloves extend?
   _answerA: Extend to forearm
   _answerB: Extend until comfortable
-  _answerC: Extend to cover your wrist
-  _answerD: Extend to cover wrist of isolatioin gown
+  _answerC: Extend gloves over the isolation gown and ensure wrists are covered
+  _answerD: None of the above
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

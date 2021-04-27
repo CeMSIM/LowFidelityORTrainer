@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Mask Doffing Question 3
   m_EditorClassIdentifier: 
-  _info: What should be done after the N95 Mask is removed?
-  _answerA: Discard into a trash bin
-  _answerB: Place into a washing machine
-  _answerC: Discard into a waste container if soiled
-  _answerD: Place into a washing machine if soiled
+  _info: What should be done after you remove your N95 respirator and you notice
+    it IS visibly soiled or damaged?
+  _answerA: Place in a washing machine
+  _answerB: Place in an approved N95 sterilizer
+  _answerC: Discard into an appropriate waste container
+  _answerD: Place in a paper bag so you can reuse it
   _questText: Select the correct answer
   _useTimer: 0
   _timer: 0

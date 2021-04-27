@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Gloves Doffing Question 1
   m_EditorClassIdentifier: 
   _info: What is the first step in doffing the gloves?
-  _answerA: Have a partner remove one glove
-  _answerB: Using an ungloved hand, rasp the palm area of the gloved hand and peel
+  _answerA: Have a partner remove ONE glove
+  _answerB: Using an UNGLOVED hand, grasp the palm area of the gloved hand and peel
     off the glove
-  _answerC: Have a partner remove both gloves
-  _answerD: Using a gloved hand, rasp the palm area of the other gloved hand and
+  _answerC: Have a partner remove BOTH gloves
+  _answerD: Using a GLOVED hand, grasp the palm area of the other gloved hand and
     peel off the first glove
   _questText: Select the correct answer
   _useTimer: 0

@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info: What is the first step in removing the gown?
   _answerA: Roll up your sleeve
-  _answerB: Carefully pull the gown off you, without touching your body with the
-    outside
-  _answerC: Unfasten the gown ties, taking care that sleeves don't contact your body
-    when reaching for ties
+  _answerB: 'Grasp the INSIDE of the gown and pull away from your body '
+  _answerC: Unfasten the gown ties (if applicable) and then carefully pull the gown
+    away from you, touching only the OUTSIDE of the gown
   _answerD: Fold the gown upwards
   _questText: Select the correct answer
   _useTimer: 0
