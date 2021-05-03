@@ -22,6 +22,7 @@ public class ExamUIManager : MonoBehaviour
     public GameObject AnswerDText;
     public GameObject QuestionInfoTextObject;
     public GameObject QuestText;
+    public GameObject CurrentPPE;
 
     public QuestionsManager test;
     // Start is called before the first frame update
@@ -54,6 +55,7 @@ public class ExamUIManager : MonoBehaviour
         AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerC;
         AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerD;
         QuestText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].QuestText;
+        CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].CurrentObject;
 
         //Displays the Results Screen once the PPE is completely doffed
         if (ExamChoicesInt > 33)

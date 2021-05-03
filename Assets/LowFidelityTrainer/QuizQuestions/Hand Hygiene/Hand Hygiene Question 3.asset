@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Hand Hygiene Question 3
   m_EditorClassIdentifier: 
-  _info: 
+  _info: Hands have been washed
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Select the next item of PPE to doff, the Goggles/Eye Protection
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Next, Doff:'
+  _currentObject: Eye Protection

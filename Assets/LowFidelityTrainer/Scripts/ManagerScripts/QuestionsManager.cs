@@ -40,13 +40,16 @@ public class QuestionsManager : ScriptableObject
     [SerializeField] private string _questText;
     public string QuestText { get { return _questText; } }
 
+    [SerializeField] private string _currentObject;
+    public string CurrentObject { get { return _currentObject; } }
+
 
     //Code for a timer if we decide too add one
-    
-   // [SerializeField] private bool _useTimer = false;
-   // public bool UseTimer { get { return _useTimer; } }
 
-   // [SerializeField] private int _timer = 0;
+    // [SerializeField] private bool _useTimer = false;
+    // public bool UseTimer { get { return _useTimer; } }
+
+    // [SerializeField] private int _timer = 0;
     //public int Timer { get { return _timer; } }
 
 

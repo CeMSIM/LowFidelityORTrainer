@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Introduction
   m_EditorClassIdentifier: 
-  _info: Question information will appear here
+  _info: Welcome to the Vortex Simulator!
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Welcome to the Vortex Simulator! Please select the first step in PPE
-    donning, Hand Hygiene
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Complete:'
+  _currentObject: Hand Hygiene

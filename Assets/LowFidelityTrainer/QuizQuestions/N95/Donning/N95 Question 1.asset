@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: N95 Question 1
   m_EditorClassIdentifier: 
   _info: What area of the face should be covered by the N95 Mask?
-  _answerA: Make sure both the mouth and nose are covered
-  _answerB: Make sure entire mouth is covered
-  _answerC: Make sure entire nose is covered
-  _answerD: Make sure eyes and nose are covered
+  _answerA: Mouth and Nose
+  _answerB: Mouth
+  _answerC: Nose
+  _answerD: Eyes and Nose
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentobject: 

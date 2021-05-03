@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Eye Protection Question 1
   m_EditorClassIdentifier: 
-  _info: Select the correct item
+  _info: Eye Protection has been donned
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Select the next PPE item to don, the Shoe Covers
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Next, Don:'
+  _currentObject: Shoe Covers

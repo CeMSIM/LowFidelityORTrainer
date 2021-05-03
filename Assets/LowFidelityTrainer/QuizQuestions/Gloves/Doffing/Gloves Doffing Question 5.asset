@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Gloves Doffing Question 5
   m_EditorClassIdentifier: 
-  _info: 
+  _info: Gloves properly doffed, move to an outside room and select Hand Hygiene
+    to wash your hands
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Gloves properly doffed, move to an outside room and select Hand Hygiene
-    to wash your hands
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Next, Complete:'
+  _currentObject: Hand Hygiene

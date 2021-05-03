@@ -32,6 +32,9 @@ public struct UIElements
 
     [SerializeField] TextMeshProUGUI questTextObject;
     public TextMeshProUGUI QuestTextObject { get { return questTextObject; } }
+
+    [SerializeField] TextMeshProUGUI currentObjectText;
+    public TextMeshProUGUI CurrentObjectText { get { return currentObjectText; } }
 }
 
 public class UIManager : MonoBehaviour
@@ -397,6 +400,7 @@ public class UIManager : MonoBehaviour
             uIElements.AnswerCInfoTextObject.text = TextInfo[ChoicesInt].AnswerC;
             uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
             uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
+            uIElements.CurrentObjectText.text = TextInfo[ChoicesInt].CurrentObject;
         }
 
     }
@@ -498,17 +502,17 @@ public class UIManager : MonoBehaviour
     public void ChangeOptionsHH()
     {
         
-        if (uIElements.QuestTextObject.text == "Welcome to the Vortex Simulator! Please select the first step in PPE donning, Hand Hygiene")
+        if (ChoicesInt == 0)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Gloves properly doffed, move to an outside room and select Hand Hygiene to wash your hands")
+        if (ChoicesInt == 25)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "N95 Mask has been properly doffed, move onto Hand Hygiene")
+        if (ChoicesInt == 33)
         {
             ChoicesInt += 1;
         }
@@ -516,12 +520,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsN95()
     {
-        if (uIElements.QuestTextObject.text ==  "Select the first item of PPE to don, the N95 Mask")
+        if (ChoicesInt == 1)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE to doff, the N95 Mask")
+        if (ChoicesInt == 28)
         {
             ChoicesInt += 1;
         }
@@ -529,12 +533,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsHC()
     {
-        if (uIElements.QuestTextObject.text ==  "Select the next item of PPE donning, the Head Covers")
+        if (ChoicesInt == 6)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE to doff, the Head Covers")
+        if (ChoicesInt == 27)
         {
             ChoicesInt += 1;
         }
@@ -542,12 +546,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsEP()
     {
-        if (uIElements.QuestTextObject.text == "Please select the next item of PPE donning, the Eye Protection")
+        if (ChoicesInt == 7)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE to doff, the Goggles/Eye Protection")
+        if (ChoicesInt == 26)
         {
             ChoicesInt += 1;
         }
@@ -555,12 +559,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsSC()
     {
-        if (uIElements.QuestTextObject.text == "Select the next PPE item to don, the Shoe Covers")
+        if (ChoicesInt == 8)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Donning completed, now move onto the doffing sequence. Select the first item of PPE doffing, the Shoe Covers")
+        if (ChoicesInt == 15)
         {
             ChoicesInt += 1;
         }
@@ -568,12 +572,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsGown()
     {
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE donning, the Gown")
+        if (ChoicesInt == 9)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE to doff, the Gown")
+        if (ChoicesInt == 16)
         {
             ChoicesInt += 1;
         }
@@ -581,7 +585,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsHH2()
     {
-        if (uIElements.QuestTextObject.text == "Select the next item of PPE donning, Hand Hygiene")
+        if (ChoicesInt == 11)
         {
             ChoicesInt += 1;
         }
@@ -589,12 +593,12 @@ public class UIManager : MonoBehaviour
 
     public void ChangeOptionsGloves()
     {
-        if (uIElements.QuestTextObject.text ==  "Select the next item of PPE donning, the Gloves")
+        if (ChoicesInt == 12)
         {
             ChoicesInt += 1;
         }
 
-        if (uIElements.QuestTextObject.text == "Gown properly doffed, select the next item of PPE to doff, the Gloves")
+        if (ChoicesInt == 20)
         {
             ChoicesInt += 1;
         }

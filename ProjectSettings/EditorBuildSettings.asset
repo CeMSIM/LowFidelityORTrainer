@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/LowFidelityTrainer/Scenes/1_QuizScene.unity
+    guid: 7be25e51da7b00445972ba971647a04e
   m_configObjects: {}

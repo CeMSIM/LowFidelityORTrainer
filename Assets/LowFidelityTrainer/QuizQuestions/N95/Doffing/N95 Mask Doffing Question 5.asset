@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: N95 Mask Doffing Question 5
   m_EditorClassIdentifier: 
-  _info: 
+  _info: N95 Respirator has been doffed
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: N95 Mask has been properly doffed, move onto Hand Hygiene
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Next, Complete:'
+  _currentObject: Hand Hygiene

@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Gown Doffing Question 4
   m_EditorClassIdentifier: 
-  _info: 
+  _info: Gown has been doffed
   _answerA: 
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Gown properly doffed, select the next item of PPE to doff, the Gloves
-  _useTimer: 0
-  _timer: 0
+  _questText: 'Next, Doff:'
+  _currentObject: Gloves
