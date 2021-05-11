@@ -19,5 +19,5 @@ MonoBehaviour:
   _answerC: Use a plastic hook to go underneath your gloved hand and remove it
   _answerD: None of the above
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 13

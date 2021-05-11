@@ -18,4 +18,5 @@ MonoBehaviour:
   _answerC: Nose
   _answerD: Eyes and Nose
   _questText: Select the correct answer
-  _currentobject: 
+  _currentObject: 
+  _currentNumber: 1

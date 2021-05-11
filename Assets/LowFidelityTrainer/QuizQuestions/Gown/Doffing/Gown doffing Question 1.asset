@@ -19,5 +19,5 @@ MonoBehaviour:
     away from you, touching only the OUTSIDE of the gown
   _answerD: Fold the gown upwards
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 8

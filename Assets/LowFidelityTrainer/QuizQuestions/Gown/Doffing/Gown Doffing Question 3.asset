@@ -20,5 +20,5 @@ MonoBehaviour:
   _answerD: Fold or roll the gown INSIDE OUT into a bundle, and discard in an appropriately
     labelled bin INSIDE the patient room/OR
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 10

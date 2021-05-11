@@ -43,6 +43,9 @@ public class QuestionsManager : ScriptableObject
     [SerializeField] private string _currentObject;
     public string CurrentObject { get { return _currentObject; } }
 
+    [SerializeField] private string _currentNumber;
+    public string CurrentNumber { get { return _currentNumber; } }
+
 
     //Code for a timer if we decide too add one
 

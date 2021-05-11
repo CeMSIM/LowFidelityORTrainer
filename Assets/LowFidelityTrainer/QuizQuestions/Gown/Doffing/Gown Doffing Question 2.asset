@@ -18,5 +18,5 @@ MonoBehaviour:
   _answerC: Pull gown AWAY from neck and shoulders, touching OUTSIDE of gown only
   _answerD: Pull gown AWAY from neck and shoulders, touching INSIDE of gown only
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 9

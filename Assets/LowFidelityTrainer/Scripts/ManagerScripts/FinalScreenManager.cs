@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class FinalScreenManager : MonoBehaviour
 {
-    public GameObject WrongQuestion;
+
+
+    public GameObject TitleScreen;
     public Canvas FinalCanvas;
+    //integers used to reset for loops
     public int x;
     public int z;
+
+    
     public GameObject QuestText;
     public GameObject AnswerCheckText;
     public int yVector;
     public GameObject Test;
 
+    //Accessing the question texts
     public GameObject AnswerAText;
     public GameObject AnswerBText;
     public GameObject AnswerCText;
@@ -24,11 +31,20 @@ public class FinalScreenManager : MonoBehaviour
     public GameObject Managers;
     private UIManager UI;
 
+    //Answer choice arrays
     public GameObject[] OptionsA;
     public GameObject[] OptionsB;
     public GameObject[] OptionsC;
     public GameObject[] OptionsD;
-    
+
+    //Separate Final Review Screens
+    public GameObject N95Don;
+    public GameObject GownDon;
+    public GameObject GlovesDon;
+    public GameObject N95Doff;
+    public GameObject GownDoff;
+    public GameObject GlovesDoff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -153,6 +169,58 @@ public class FinalScreenManager : MonoBehaviour
             }
         }
         z = 0;
+    }
+
+    //Creating functions that allow the player to see each final review screen
+    public void ViewN95Don()
+    {
+        N95Don.gameObject.SetActive(true);
+    }
+
+    public void ViewGownDon()
+    {
+        GownDon.gameObject.SetActive(true);
+    }
+
+    public void ViewGlovesDon()
+    {
+        GlovesDon.gameObject.SetActive(true);
+    }
+
+    public void ViewN95Doff()
+    {
+        N95Doff.gameObject.SetActive(true);
+    }
+
+    public void ViewGownDoff()
+    {
+        GownDoff.gameObject.SetActive(true);
+    }
+
+    public void ViewGlovesDoff()
+    {
+        GlovesDoff.gameObject.SetActive(true);
+    }
+
+
+
+    //Function to turn off the individual review screens whenthe player returns to the main final screen
+
+    public void ReturnToMain()
+    {
+        N95Don.gameObject.SetActive(false);
+        GownDon.gameObject.SetActive(false);
+        GlovesDon.gameObject.SetActive(false);
+        N95Doff.gameObject.SetActive(false);
+        GownDoff.gameObject.SetActive(false);
+        GlovesDoff.gameObject.SetActive(false);
+    }
+
+    public void ReturnToTitle()
+    {
+        
+        SceneManager.LoadScene("1_QuizScene");
+        TitleScreen.gameObject.SetActive(true);
     }
 
 }

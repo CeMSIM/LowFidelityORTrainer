@@ -19,5 +19,5 @@ MonoBehaviour:
   _answerC: Discard into an appropriate waste container
   _answerD: Place in a paper bag so you can reuse it
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 17

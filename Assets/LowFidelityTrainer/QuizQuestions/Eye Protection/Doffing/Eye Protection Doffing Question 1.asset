@@ -17,5 +17,6 @@ MonoBehaviour:
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: 'Next, Doff:'
+  _questText: 'Next, Doff The:'
   _currentObject: Head Covers
+  _currentNumber: 

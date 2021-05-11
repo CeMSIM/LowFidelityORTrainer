@@ -18,5 +18,5 @@ MonoBehaviour:
   _answerC: 3
   _answerD: 4
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 6

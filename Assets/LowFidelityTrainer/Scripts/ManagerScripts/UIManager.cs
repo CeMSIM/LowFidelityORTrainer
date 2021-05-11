@@ -35,10 +35,15 @@ public struct UIElements
 
     [SerializeField] TextMeshProUGUI currentObjectText;
     public TextMeshProUGUI CurrentObjectText { get { return currentObjectText; } }
+
+
+    [SerializeField] TextMeshProUGUI currentNumberText;
+    public TextMeshProUGUI CurrentNumberText { get { return currentNumberText; } }
 }
 
 public class UIManager : MonoBehaviour
 {
+    public int QuestionNumber;
     public int stop;
     public QuestionsManager test;
 
@@ -123,12 +128,24 @@ public class UIManager : MonoBehaviour
     public GameObject EPDoffCheck;
     public GameObject HCDoffCheck;
     public GameObject N95DoffCheck;
+    public GameObject DonningCheck;
+    public GameObject DoffingCheck;
 
     public GameObject BG;
 
     public GameObject AnswerCheck;
+    public GameObject QuestionNumberText;
+    public GameObject UndoButton;
 
     public int y;
+
+
+    public GameObject N95DonFraction;
+    public GameObject GownDonFraction;
+    public GameObject GlovesDonFraction;
+    public GameObject N95DoffFraction;
+    public GameObject GownDoffFraction;
+    public GameObject GlovesDoffFraction;
     private void Start()
     {
         //Integer used to prevent UIManager and ExamUIManager from conflicting
@@ -194,14 +211,31 @@ public class UIManager : MonoBehaviour
 
         TextInfo[34] = End;
 
-
+        DoffingCheck.gameObject.SetActive(false);
     }
 
     private void Update()
     {
+
+        if (ChoicesInt > 15 && stop == 0)
+        {
+            UndoButton.gameObject.SetActive(false);
+
+        }
+
+        //if tutorial is chosen, then the numbers and questions will correspond accordingly
+        
+        
+
         //Settinng the respective cecklist game objects to true once the PPE object is donned or doffed
         if (stop == 0)
         {
+            N95DonFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            GownDonFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            GlovesDonFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            N95DoffFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            GownDoffFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            GlovesDoffFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
             if (ChoicesInt > 0)
             {
                 HH1Check.gameObject.SetActive(true);
@@ -288,6 +322,8 @@ public class UIManager : MonoBehaviour
             if (ChoicesInt > 14)
             {
                 GlovesDonCheck.gameObject.SetActive(true);
+                DonningCheck.gameObject.SetActive(false);
+                DoffingCheck.gameObject.SetActive(true);
             }
 
             else
@@ -401,6 +437,7 @@ public class UIManager : MonoBehaviour
             uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
             uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
             uIElements.CurrentObjectText.text = TextInfo[ChoicesInt].CurrentObject;
+            uIElements.CurrentNumberText.text = TextInfo[ChoicesInt].CurrentNumber;
         }
 
     }
@@ -412,6 +449,7 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerAInfoTextObject.text == AnswersArrayA[i])
             {
+                
                 y += 1;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
@@ -613,6 +651,14 @@ public class UIManager : MonoBehaviour
     //Resets the questions to the beginning
     public void Reset()
     {
+       
         ChoicesInt = 0;
+    }
+
+
+    //Exit Game
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

@@ -20,5 +20,5 @@ MonoBehaviour:
   _answerC: Invert the mask
   _answerD: Bend the cusp over your nose
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 2

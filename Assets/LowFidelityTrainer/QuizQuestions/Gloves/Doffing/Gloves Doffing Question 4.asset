@@ -18,5 +18,5 @@ MonoBehaviour:
   _answerC: The patient room
   _answerD: None of the above
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 14

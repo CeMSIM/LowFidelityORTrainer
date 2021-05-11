@@ -20,5 +20,5 @@ MonoBehaviour:
   _answerD: Using a GLOVED hand, grasp the palm area of the other gloved hand and
     peel off the first glove
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 11

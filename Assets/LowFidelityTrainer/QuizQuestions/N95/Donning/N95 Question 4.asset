@@ -22,5 +22,5 @@ MonoBehaviour:
   _answerD: You ensure the N95 fits snuggly and confirm you cannot feel air escaping
     from the top (nose) and bottom (chin)
   _questText: Select the correct answer
-  _useTimer: 0
-  _timer: 0
+  _currentObject: 
+  _currentNumber: 4
