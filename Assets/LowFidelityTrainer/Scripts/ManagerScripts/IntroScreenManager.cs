@@ -11,8 +11,10 @@ public class IntroScreenManager : MonoBehaviour
     public GameObject IntroScreen;
     public GameObject Manager;
 
+    public GameObject BeginDoffing;
+    public GameObject EndDoffing;
 
-    public UIManager UI;
+    private UIManager UI;
     void Start()
     {
         //Acessing the UIManager Script
@@ -37,6 +39,8 @@ public class IntroScreenManager : MonoBehaviour
         Tutorial_Track.gameObject.SetActive(true);
         IntroScreen.gameObject.SetActive(false);
         Exam_Track.gameObject.SetActive(false);
+        BeginDoffing.gameObject.SetActive(false);
+        EndDoffing.gameObject.SetActive(false);
         
         
     }
@@ -45,7 +49,8 @@ public class IntroScreenManager : MonoBehaviour
     {
         
         IntroScreen.gameObject.SetActive(false);
-        
+        BeginDoffing.gameObject.SetActive(true);
+        EndDoffing.gameObject.SetActive(true);
         //Tutorial_Track.gameObject.SetActive(false);
         UI.stop = 1;
     }

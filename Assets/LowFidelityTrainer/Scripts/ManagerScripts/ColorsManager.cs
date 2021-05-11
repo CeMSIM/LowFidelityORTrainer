@@ -7,6 +7,7 @@ public class ColorsManager : MonoBehaviour
 {
     private UIManager UI;
     private ExamUIManager EUI;
+    private ExamPPEManager EPP;
 
     public GameObject ExamManager;
     public GameObject Manage;
@@ -42,6 +43,7 @@ public class ColorsManager : MonoBehaviour
         
         EUI = ExamManager.GetComponent<ExamUIManager>();
         UI = Manage.GetComponent<UIManager>();
+        EPP = ExamManager.GetComponent<ExamPPEManager>();
 
         HHButtonText.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
         EPButtonText.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
@@ -123,7 +125,7 @@ public class ColorsManager : MonoBehaviour
 
 
 
-            if (EUI.ExamChoicesInt > 7)
+            if (EUI.ExamChoicesInt == 8)
             {
                 EPMaterial.color = Color.green;
             }
@@ -170,6 +172,42 @@ public class ColorsManager : MonoBehaviour
             if (EUI.ExamChoicesInt == 25)
             {
                 GlovesMaterial.color = Color.white;
+            }
+
+
+            //Making sure the buttons are uninteractable if they have not been doffed
+            if (EPP.Doffing == true)
+            {
+                if (N95Material.color == Color.white)
+                {
+                    EPP.N95Button.interactable = false;
+                }
+
+                if (EPMaterial.color == Color.white)
+                {
+                    EPP.EPButton.interactable = false;
+                }
+
+                if (HCMaterial.color == Color.white)
+                {
+                    EPP.HCButton.interactable = false;
+                }
+
+                if (SCMaterial.color == Color.white)
+                {
+                    EPP.SCButton.interactable = false;
+                }
+
+                if (GlovesMaterial.color == Color.white)
+                {
+                    EPP.GlovesButton.interactable = false;
+                }
+
+                if (GownMaterial.color == Color.white)
+                {
+                    EPP.GownButton.interactable = false;
+                }
+
             }
 
         }

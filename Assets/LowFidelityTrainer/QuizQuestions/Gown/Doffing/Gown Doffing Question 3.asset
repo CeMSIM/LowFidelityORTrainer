@@ -21,4 +21,4 @@ MonoBehaviour:
     labelled bin INSIDE the patient room/OR
   _questText: Select the correct answer
   _currentObject: 
-  _currentNumber: 10
+  _currentNumber: 3

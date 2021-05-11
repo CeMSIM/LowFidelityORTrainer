@@ -52,12 +52,12 @@ public class ExamUIManager : MonoBehaviour
     {
         
        
-        N95DoffWrongCount = 4;
-        GownDoffWrongCount = 3;
-        GlovesDoffWrongCount = 4;
-        N95DonWrongCount = 4;
-        GownDonWrongCount = 1;
-        GlovesDonWrongCount = 2;
+        N95DoffWrongCount = 0;
+        GownDoffWrongCount = 0;
+        GlovesDoffWrongCount = 0;
+        N95DonWrongCount = 0;
+        GownDonWrongCount = 0;
+        GlovesDonWrongCount = 0;
         //Accesing the UIManager Script
         UI = Managers.GetComponent<UIManager>();
 
@@ -108,7 +108,7 @@ public class ExamUIManager : MonoBehaviour
         AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerB;
         AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerC;
         AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerD;
-        QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Answer the questions/Select the next item of PPE";
+        QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Select the items to don and answer the associated questions. When you have selected all the PPE needed, press Finish";
         CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
         NumberText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].CurrentNumber;
 
@@ -178,8 +178,8 @@ public class ExamUIManager : MonoBehaviour
         if (ExamChoicesInt == 15)
         {
             UI.GlovesDonCheck.gameObject.SetActive(true);
-            UI.DonningCheck.gameObject.SetActive(false);
-            UI.DoffingCheck.gameObject.SetActive(true);
+            //UI.DonningCheck.gameObject.SetActive(false);
+            //UI.DoffingCheck.gameObject.SetActive(true);
         }
 
 
@@ -270,7 +270,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt >1 && ExamChoicesInt <6)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -278,9 +278,9 @@ public class ExamUIManager : MonoBehaviour
         
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            N95DonWrongCount -= 1;
+            N95DonWrongCount += 1;
         }
 
         z = 0;
@@ -295,7 +295,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt == 10)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -303,9 +303,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            GownDonWrongCount -= 1;
+            GownDonWrongCount += 1;
         }
 
         z = 0;
@@ -320,7 +320,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 12 && ExamChoicesInt < 15)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -328,9 +328,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            GlovesDonWrongCount -= 1;
+            GlovesDonWrongCount += 1;
         }
 
         z = 0;
@@ -344,7 +344,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 28 && ExamChoicesInt < 33)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -352,9 +352,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            N95DoffWrongCount -= 1;
+            N95DoffWrongCount += 1;
         }
 
         z = 0;
@@ -369,7 +369,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 16 && ExamChoicesInt < 20)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -377,9 +377,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            GownDoffWrongCount -= 1;
+            GownDoffWrongCount += 1;
         }
 
         z = 0;
@@ -395,7 +395,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 20 && ExamChoicesInt < 25)
             {
-                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayD[i])
+                if (AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
                 {
                     z += 1;
                 }
@@ -403,9 +403,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayD.Length)
+        if (z == 1)
         {
-            GlovesDoffWrongCount -= 1;
+            GlovesDoffWrongCount += 1;
         }
 
         z = 0;
@@ -430,7 +430,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 1 && ExamChoicesInt < 6)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -438,9 +438,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            N95DonWrongCount -= 1;
+            N95DonWrongCount += 1;
         }
 
         z = 0;
@@ -455,7 +455,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt == 10)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -463,9 +463,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            GownDonWrongCount -= 1;
+            GownDonWrongCount += 1;
         }
 
         z = 0;
@@ -480,7 +480,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 12 && ExamChoicesInt < 15)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -488,9 +488,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            GlovesDonWrongCount -= 1;
+            GlovesDonWrongCount += 1;
         }
 
         z = 0;
@@ -504,7 +504,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 28 && ExamChoicesInt < 33)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -512,9 +512,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            N95DoffWrongCount -= 1;
+            N95DoffWrongCount += 1;
         }
 
         z = 0;
@@ -529,7 +529,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 16 && ExamChoicesInt < 20)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -537,9 +537,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            GownDoffWrongCount -= 1;
+            GownDoffWrongCount += 1;
         }
 
         z = 0;
@@ -555,7 +555,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 20 && ExamChoicesInt < 25)
             {
-                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
+                if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
                 {
                     z += 1;
                 }
@@ -563,9 +563,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayC.Length)
+        if (z == 1)
         {
-            GlovesDoffWrongCount -= 1;
+            GlovesDoffWrongCount += 1;
         }
 
         z = 0;
@@ -589,7 +589,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 1 && ExamChoicesInt < 6)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -597,9 +597,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            N95DonWrongCount -= 1;
+            N95DonWrongCount += 1;
         }
 
         z = 0;
@@ -614,7 +614,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt == 10)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -622,9 +622,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            GownDonWrongCount -= 1;
+            GownDonWrongCount += 1;
         }
 
         z = 0;
@@ -639,7 +639,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 12 && ExamChoicesInt < 15)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -647,9 +647,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            GlovesDonWrongCount -= 1;
+            GlovesDonWrongCount += 1;
         }
 
         z = 0;
@@ -663,7 +663,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 28 && ExamChoicesInt < 33)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -671,9 +671,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            N95DoffWrongCount -= 1;
+            N95DoffWrongCount += 1;
         }
 
         z = 0;
@@ -688,7 +688,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 16 && ExamChoicesInt < 20)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -696,9 +696,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            GownDoffWrongCount -= 1;
+            GownDoffWrongCount += 1;
         }
 
         z = 0;
@@ -714,7 +714,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 20 && ExamChoicesInt < 25)
             {
-                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayB[i])
+                if (AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
                 {
                     z += 1;
                 }
@@ -722,9 +722,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayB.Length)
+        if (z == 1)
         {
-            GlovesDoffWrongCount -= 1;
+            GlovesDoffWrongCount += 1;
         }
 
         z = 0;
@@ -752,7 +752,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 1 && ExamChoicesInt < 6)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -760,9 +760,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            N95DonWrongCount -= 1;
+            N95DonWrongCount += 1;
         }
 
         z = 0;
@@ -777,7 +777,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt == 10)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -785,9 +785,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            GownDonWrongCount -= 1;
+            GownDonWrongCount += 1;
         }
 
         z = 0;
@@ -802,7 +802,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 12 && ExamChoicesInt < 15)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -810,9 +810,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            GlovesDonWrongCount -= 1;
+            GlovesDonWrongCount += 1;
         }
 
         z = 0;
@@ -826,7 +826,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 28 && ExamChoicesInt < 33)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -834,9 +834,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            N95DoffWrongCount -= 1;
+            N95DoffWrongCount += 1;
         }
 
         z = 0;
@@ -851,7 +851,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 16 && ExamChoicesInt < 20)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -859,9 +859,9 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            GownDoffWrongCount -= 1;
+            GownDoffWrongCount += 1;
         }
 
         z = 0;
@@ -877,7 +877,7 @@ public class ExamUIManager : MonoBehaviour
         {
             if (ExamChoicesInt > 20 && ExamChoicesInt < 25)
             {
-                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayA[i])
+                if (AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
                 {
                     z += 1;
                 }
@@ -885,14 +885,26 @@ public class ExamUIManager : MonoBehaviour
 
         }
 
-        if (z == UI.AnswersArrayA.Length)
+        if (z == 1)
         {
-            GlovesDoffWrongCount -= 1;
+            GlovesDoffWrongCount += 1;
         }
 
         z = 0;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

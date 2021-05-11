@@ -12,7 +12,7 @@ public class ExamPPEManager : MonoBehaviour
     private UIManager UI;
     private ExamUIManager EUI;
 
-    private bool Doffing;
+    public bool Doffing;
 
     public List<string> DonningChoices;
     public List<string> DoffingChoices;
@@ -107,7 +107,33 @@ public class ExamPPEManager : MonoBehaviour
         Doffing = true;
         N95Button.interactable = true;
         UI.DonningCheck.gameObject.SetActive(false);
+        UI.DoffingCheck.gameObject.SetActive(true);
 
+    }
+
+    public void EndDoffing()
+    {
+        UI.BG.gameObject.SetActive(true);
+    }
+
+
+    public void HH()
+    {
+        if (UI.stop != 0 && Doffing == false && EUI.ExamChoicesInt == 0)
+        {
+            EUI.ExamChoicesInt = 1;
+            DonningChoices.Add("Hand Hygiene");
+        }
+        else if (UI.stop != 0 && Doffing == false && EUI.ExamChoicesInt > 1)
+        {
+            EUI.ExamChoicesInt = 12;
+            DonningChoices.Add("Hand Hygiene");
+        }
+        else if (UI.stop != 0 && Doffing == true)
+        {
+            EUI.ExamChoicesInt = 26;
+            DonningChoices.Add("Hand Hygiene");
+        }
     }
     public void N95()
     {
@@ -147,8 +173,8 @@ public class ExamPPEManager : MonoBehaviour
         }
         else if (UI.stop != 0 && Doffing == true)
         {
-            EUI.ExamChoicesInt = 29;
-            DoffingChoices.Add("N95");
+            EUI.ExamChoicesInt = 17;
+            DoffingChoices.Add("Gown");
         }
     }
 
