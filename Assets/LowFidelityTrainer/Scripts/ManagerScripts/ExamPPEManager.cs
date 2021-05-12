@@ -17,12 +17,12 @@ public class ExamPPEManager : MonoBehaviour
     public bool Doffing;
     private bool ButtonActive;
 
-    private bool N95Bool;
-    private bool GownBool;
-    private bool GlovesBool;
-    private bool EPBool;
-    private bool HCBool;
-    private bool SCBool;
+    public bool N95Bool;
+    public bool GownBool;
+    public bool GlovesBool;
+    public bool EPBool;
+    public bool HCBool;
+    public bool SCBool;
 
     public List<string> DonningChoices;
     public List<string> DoffingChoices;
@@ -62,14 +62,14 @@ public class ExamPPEManager : MonoBehaviour
 
         if (UI.AnswerButtons.activeSelf)
         {
-            ButtonActive = false;
+            ButtonActive = true;
         }
         else
         {
-            ButtonActive = true;
+            ButtonActive = false;
         }
 
-        if (ButtonActive == true && N95Bool == true)
+        if (ButtonActive == false && N95Bool == true)
         {
             N95Button.interactable = true;
         }
@@ -79,7 +79,7 @@ public class ExamPPEManager : MonoBehaviour
         }
 
 
-        if (ButtonActive == true && HCBool == true)
+        if (ButtonActive == false && HCBool == true)
         {
             HCButton.interactable = true;
         }
@@ -90,7 +90,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == true && SCBool == true)
+        if (ButtonActive == false && SCBool == true)
         {
             SCButton.interactable = true;
         }
@@ -101,7 +101,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == true && EPBool == true)
+        if (ButtonActive == false && EPBool == true)
         {
             EPButton.interactable = true;
         }
@@ -113,7 +113,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == true && GownBool == true)
+        if (ButtonActive == false && GownBool == true)
         {
             GownButton.interactable = true;
         }
@@ -124,7 +124,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == true && GlovesBool == true)
+        if (ButtonActive == false && GlovesBool == true)
         {
             GlovesButton.interactable = true;
         }
@@ -161,7 +161,7 @@ public class ExamPPEManager : MonoBehaviour
 
     public void EndDoffing()
     {
-        UI.BG.gameObject.SetActive(true);
+        UI.FinalBG.gameObject.SetActive(true);
     }
 
 

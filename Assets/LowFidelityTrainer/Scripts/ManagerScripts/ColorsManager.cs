@@ -180,32 +180,32 @@ public class ColorsManager : MonoBehaviour
             {
                 if (N95Material.color == Color.white)
                 {
-                    EPP.N95Button.interactable = false;
+                    EPP.N95Bool = false;
                 }
 
                 if (EPMaterial.color == Color.white)
                 {
-                    EPP.EPButton.interactable = false;
+                    EPP.EPBool = false;
                 }
 
                 if (HCMaterial.color == Color.white)
                 {
-                    EPP.HCButton.interactable = false;
+                    EPP.HCBool = false;
                 }
 
                 if (SCMaterial.color == Color.white)
                 {
-                    EPP.SCButton.interactable = false;
+                    EPP.SCBool = false;
                 }
 
                 if (GlovesMaterial.color == Color.white)
                 {
-                    EPP.GlovesButton.interactable = false;
+                    EPP.GlovesBool = false;
                 }
 
                 if (GownMaterial.color == Color.white)
                 {
-                    EPP.GownButton.interactable = false;
+                    EPP.GownBool = false;
                 }
 
             }

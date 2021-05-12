@@ -131,7 +131,7 @@ public class UIManager : MonoBehaviour
     public GameObject DonningCheck;
     public GameObject DoffingCheck;
 
-    public GameObject BG;
+    public GameObject FinalBG;
 
     public GameObject AnswerCheck;
     public GameObject QuestionNumberText;
@@ -153,7 +153,8 @@ public class UIManager : MonoBehaviour
         //Make the answer check initially blank
         AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "";
         //Setting the final screen to false and creating ints for question changes
-        BG.gameObject.SetActive(false);
+        FinalBG.gameObject.SetActive(false);
+
         y = 0;
         
         ChoicesInt = 0;
@@ -415,7 +416,7 @@ public class UIManager : MonoBehaviour
 
             if (ChoicesInt > 33)
             {
-                BG.gameObject.SetActive(true);
+                FinalBG.gameObject.SetActive(true);
             }
         }
             if (uIElements.AnswerAInfoTextObject.text == "")
