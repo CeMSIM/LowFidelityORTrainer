@@ -12,8 +12,10 @@ public class ExamUIManager : MonoBehaviour
     public int ExamChoicesInt;
 
     private UIManager UI;
+    private ExamPPEManager EPP;
 
     public GameObject Managers;
+    public GameObject ExamManagers;
 
     private QuestionsManager[] TextInfo;
 
@@ -58,8 +60,9 @@ public class ExamUIManager : MonoBehaviour
         N95DonWrongCount = 0;
         GownDonWrongCount = 0;
         GlovesDonWrongCount = 0;
-        //Accesing the UIManager Script
+        //Accesing other scripts
         UI = Managers.GetComponent<UIManager>();
+        EPP = ExamManagers.GetComponent<ExamPPEManager>();
 
 
         ExamChoicesInt = 0;
@@ -133,6 +136,11 @@ public class ExamUIManager : MonoBehaviour
     public void ResetExam()
     {
         ExamChoicesInt = 0;
+
+        foreach (var obj in EPP.ChecklistObjects)
+        {
+            Destroy(obj);
+        }
     }
 
 
