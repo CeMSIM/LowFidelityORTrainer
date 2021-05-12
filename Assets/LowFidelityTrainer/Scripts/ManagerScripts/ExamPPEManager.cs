@@ -8,14 +8,26 @@ public class ExamPPEManager : MonoBehaviour
 {
     public GameObject Managers;
     public GameObject ExamManagers;
+    public GameObject ChecklistManager;
 
     private UIManager UI;
     private ExamUIManager EUI;
+    private ChecklistManager CLM;
 
     public bool Doffing;
+    private bool ButtonActive;
+
+    private bool N95Bool;
+    private bool GownBool;
+    private bool GlovesBool;
+    private bool EPBool;
+    private bool HCBool;
+    private bool SCBool;
 
     public List<string> DonningChoices;
     public List<string> DoffingChoices;
+
+    public List<GameObject> ChecklistObjects;
 
     public Button N95Button;
     public Button HCButton;
@@ -23,82 +35,102 @@ public class ExamPPEManager : MonoBehaviour
     public Button EPButton;
     public Button GlovesButton;
     public Button GownButton;
+
+    public GameObject BeginDoff;
     // Start is called before the first frame update
     void Start()
     {
-        
+        N95Bool = true;
+        HCBool = true;
+        SCBool = true;
+        EPBool = true;
+        GlovesBool = true;
+        GownBool = true;
+        ButtonActive = true;
+
         Doffing = false;
 
 
         UI = Managers.GetComponent<UIManager>();
         EUI = ExamManagers.GetComponent<ExamUIManager>();
+        CLM = ChecklistManager.GetComponent<ChecklistManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (UI.N95DonCheck.activeSelf && UI.DonningCheck.activeSelf)
+
+        if (UI.AnswerButtons.activeSelf)
         {
-            N95Button.interactable = false;
+            ButtonActive = false;
         }
         else
+        {
+            ButtonActive = true;
+        }
+
+        if (ButtonActive == true && N95Bool == true)
         {
             N95Button.interactable = true;
         }
-
-
-
-        if (UI.GlovesDonCheck.activeSelf && UI.DonningCheck.activeSelf)
-        {
-            GlovesButton.interactable = false;
-        }
         else
         {
-            GlovesButton.interactable = true;
+            N95Button.interactable = false;
         }
 
 
-
-        if (UI.GownDonCheck.activeSelf && UI.DonningCheck.activeSelf)
-        {
-            GownButton.interactable = false;
-        }
-        else
-        {
-            GownButton.interactable = true;
-        }
-
-
-
-        if (UI.HCDonCheck.activeSelf && UI.DonningCheck.activeSelf)
-        {
-            HCButton.interactable = false;
-        }
-        else
+        if (ButtonActive == true && HCBool == true)
         {
             HCButton.interactable = true;
         }
-
-
-
-        if (UI.SCDonCheck.activeSelf && UI.DonningCheck.activeSelf)
-        {
-            SCButton.interactable = false;
-        }
         else
+        {
+            HCButton.interactable = false;
+        }
+
+
+
+        if (ButtonActive == true && SCBool == true)
         {
             SCButton.interactable = true;
         }
-
-
-
-        if (UI.EPDonCheck.activeSelf && UI.DonningCheck.activeSelf)
+        else
         {
-            EPButton.interactable = false;
+            SCButton.interactable = false;
+        }
+
+
+
+        if (ButtonActive == true && EPBool == true)
+        {
+            EPButton.interactable = true;
         }
         else
         {
-            EPButton.interactable = true;
+            EPButton.interactable = false;
+        }
+
+
+
+
+        if (ButtonActive == true && GownBool == true)
+        {
+            GownButton.interactable = true;
+        }
+        else
+        {
+            GownButton.interactable = false;
+        }
+
+
+
+        if (ButtonActive == true && GlovesBool == true)
+        {
+            GlovesButton.interactable = true;
+        }
+        else
+        {
+            GlovesButton.interactable = false;
         }
     }
 
@@ -108,7 +140,23 @@ public class ExamPPEManager : MonoBehaviour
         N95Button.interactable = true;
         UI.DonningCheck.gameObject.SetActive(false);
         UI.DoffingCheck.gameObject.SetActive(true);
+        N95Bool = true;
+        GownBool = true;
+        GlovesBool = true;
+        EPBool = true;
+        HCBool = true;
+        SCBool = true;
 
+        CLM.ChecklistTextPosition = 125;
+        CLM.HHCount = 0;
+
+        BeginDoff.gameObject.SetActive(false);
+
+        foreach (var obj in ChecklistObjects)
+        {
+            Destroy(obj);
+        }
+        
     }
 
     public void EndDoffing()
@@ -123,6 +171,7 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 1;
             DonningChoices.Add("Hand Hygiene");
+
         }
         else if (UI.stop != 0 && Doffing == false && EUI.ExamChoicesInt > 1)
         {
@@ -141,11 +190,14 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 2;
             DonningChoices.Add("N95");
+            N95Bool = false;
+            
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 29;
             DoffingChoices.Add("N95");
+            N95Bool = false;
         }
 
     }
@@ -156,11 +208,13 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 13;
             DonningChoices.Add("Gloves");
+            GlovesBool = false;
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 21;
             DoffingChoices.Add("Gloves");
+            GlovesBool = false;
         }
     }
 
@@ -170,11 +224,13 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 10;
             DonningChoices.Add("Gown");
+            GownBool = false;
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 17;
             DoffingChoices.Add("Gown");
+            GownBool = false;
         }
     }
 
@@ -184,11 +240,13 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 8;
             DonningChoices.Add("Eye Protection");
+            EPBool = false;
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 27;
             DoffingChoices.Add("Eye Protection");
+            EPBool = false;
         }
     }
 
@@ -198,11 +256,13 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 7;
             DonningChoices.Add("Head Cover");
+            HCBool = false;
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 28;
             DoffingChoices.Add("Head Cover");
+            HCBool = false;
         }
     }
 
@@ -212,11 +272,13 @@ public class ExamPPEManager : MonoBehaviour
         {
             EUI.ExamChoicesInt = 9;
             DonningChoices.Add("Shoe Covers");
+            SCBool = false;
         }
         else if (UI.stop != 0 && Doffing == true)
         {
             EUI.ExamChoicesInt = 16;
             DoffingChoices.Add("Shoe Covers");
+            SCBool = false;
         }
     }
 

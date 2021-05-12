@@ -441,6 +441,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: SCGenerateChecklist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &11432023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9525,7 +9536,7 @@ GameObject:
   - component: {fileID: 501694843}
   m_Layer: 5
   m_Name: Tutorial_Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10338,6 +10349,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1945175512}
         m_MethodName: N95
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: N95GenerateChecklist
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17427,6 +17449,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: EPGenerateChecklist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1086397693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23064,6 +23097,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: HHGenerateChecklist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517089260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25533,6 +25577,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: GlovesGenerateChecklist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1653882749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27678,6 +27733,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798623791}
   m_CullTransparentMesh: 0
+--- !u!1 &1799683518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799683520}
+  - component: {fileID: 1799683519}
+  m_Layer: 0
+  m_Name: Checklist_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1799683519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799683518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5b7bcd0804066498d5f379a29b0f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChecklistText: {fileID: 6977445613212025885, guid: c66074309ee4afb4e86130c39323528c,
+    type: 3}
+  Managers: {fileID: 2060140742}
+  ExamManagers: {fileID: 1945175509}
+  ChecklistTextPosition: 0
+  HHCount: 0
+--- !u!4 &1799683520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799683518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800200932
 GameObject:
   m_ObjectHideFlags: 0
@@ -30461,15 +30565,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Managers: {fileID: 2060140742}
   ExamManagers: {fileID: 1945175509}
+  ChecklistManager: {fileID: 1799683518}
   Doffing: 0
   DonningChoices: []
   DoffingChoices: []
+  ChecklistObjects: []
   N95Button: {fileID: 537907069}
   HCButton: {fileID: 2019765150}
   SCButton: {fileID: 11432022}
   EPButton: {fileID: 1086397692}
   GlovesButton: {fileID: 1653882748}
   GownButton: {fileID: 2125892200}
+  BeginDoff: {fileID: 235839910}
 --- !u!1 &1947789066
 GameObject:
   m_ObjectHideFlags: 0
@@ -31210,6 +31317,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1945175512}
         m_MethodName: HeadCover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: HCGenerateChecklist
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33394,6 +33512,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1945175512}
         m_MethodName: Gown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1799683519}
+        m_MethodName: GownGenerateChecklist
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
