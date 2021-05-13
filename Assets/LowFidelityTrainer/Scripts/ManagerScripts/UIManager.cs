@@ -146,8 +146,15 @@ public class UIManager : MonoBehaviour
     public GameObject N95DoffFraction;
     public GameObject GownDoffFraction;
     public GameObject GlovesDoffFraction;
+
+    public GameObject ColorManager;
+
+    private ColorsManager ColorsM;
     private void Start()
     {
+
+        ColorsM = ColorManager.GetComponent<ColorsManager>();
+
         //Integer used to prevent UIManager and ExamUIManager from conflicting
         stop = 0;
         //Make the answer check initially blank
@@ -453,13 +460,13 @@ public class UIManager : MonoBehaviour
                 
                 y += 1;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
+                ColorsM.AnswerCheckColor = Color.green;
                 ChoicesInt += 1;
             }
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
+                ColorsM.AnswerCheckColor = Color.red;
             }
 
             
@@ -474,7 +481,7 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerBInfoTextObject.text == AnswersArrayB[i])
             {
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
+                ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
                
@@ -484,7 +491,7 @@ public class UIManager : MonoBehaviour
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
+                ColorsM.AnswerCheckColor = Color.red;
             }
         }
 
@@ -497,7 +504,7 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerCInfoTextObject.text == AnswersArrayC[i])
             {
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
+                ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
                 
@@ -508,7 +515,7 @@ public class UIManager : MonoBehaviour
             if (y< 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
+                ColorsM.AnswerCheckColor = Color.red;
             }
         }
         y = 0;
@@ -520,7 +527,7 @@ public class UIManager : MonoBehaviour
         {
             if (uIElements.AnswerDInfoTextObject.text == AnswersArrayD[i])
             {
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.green;
+                ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
                
@@ -531,7 +538,7 @@ public class UIManager : MonoBehaviour
             if (y < 1)
             {
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Wrong";
-                AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = Color.red;
+                ColorsM.AnswerCheckColor = Color.red;
             }
         }
         y = 0;

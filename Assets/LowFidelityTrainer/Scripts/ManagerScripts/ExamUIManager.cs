@@ -136,7 +136,14 @@ public class ExamUIManager : MonoBehaviour
     public void ResetExam()
     {
         ExamChoicesInt = 0;
+        EPP.Doffing = false;
 
+        EPP.N95Bool = true;
+        EPP.HCBool = true;
+        EPP.SCBool = true;
+        EPP.EPBool = true;
+        EPP.GlovesBool = true;
+        EPP.GownBool = true;
         foreach (var obj in EPP.ChecklistObjects)
         {
             Destroy(obj);

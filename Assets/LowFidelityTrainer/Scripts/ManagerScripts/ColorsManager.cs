@@ -29,9 +29,15 @@ public class ColorsManager : MonoBehaviour
     [SerializeField] private Material SCMaterial;
     [SerializeField] private Material GlovesMaterial;
     [SerializeField] private Material GownMaterial;
+
+    public Color AnswerCheckColor;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
+
         HHMaterial.color = Color.white;
         EPMaterial.color = Color.white;
         N95Material.color = Color.white;
@@ -44,6 +50,8 @@ public class ColorsManager : MonoBehaviour
         EUI = ExamManager.GetComponent<ExamUIManager>();
         UI = Manage.GetComponent<UIManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
+
+        EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
 
         HHButtonText.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
         EPButtonText.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
@@ -59,43 +67,7 @@ public class ColorsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Hand Hygiene")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Shoe Covers")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Gown")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Head Cover")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Gloves")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "Eye Protection")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
-
-        if (EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text == "N95 Respirator")
-        {
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
-        }
-
+        UI.AnswerCheck.GetComponentInParent<TextMeshProUGUI>().color = AnswerCheckColor;
 
         //Changing the item colors to green when they are donned
         if (UI.stop != 0)
@@ -279,7 +251,17 @@ public class ColorsManager : MonoBehaviour
             }
         }
     }
-        
+   
+    
+    public void ResetColors()
+    {
+        N95Material.color = Color.white;
+        HCMaterial.color = Color.white;
+        SCMaterial.color = Color.white;
+        EPMaterial.color = Color.white;
+        GlovesMaterial.color = Color.white;
+        GownMaterial.color = Color.white;
+    }
 
     
 

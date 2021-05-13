@@ -137,7 +137,6 @@ public class ExamPPEManager : MonoBehaviour
     public void StartDoffing()
     {
         Doffing = true;
-        N95Button.interactable = true;
         UI.DonningCheck.gameObject.SetActive(false);
         UI.DoffingCheck.gameObject.SetActive(true);
         N95Bool = true;
