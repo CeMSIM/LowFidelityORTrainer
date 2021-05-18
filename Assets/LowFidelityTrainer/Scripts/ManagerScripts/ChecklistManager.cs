@@ -15,10 +15,13 @@ public class ChecklistManager : MonoBehaviour
 
     public int ChecklistTextPosition;
     public int HHCount;
+
+    public string RoomStatus;
+    public GameObject RoomStatusText;
     // Start is called before the first frame update
     void Start()
     {
-
+        RoomStatus = "Patient Room";
         UI = Managers.GetComponent<UIManager>();
         EUI = ExamManagers.GetComponent<ExamUIManager>();
         EPP = ExamManagers.GetComponent<ExamPPEManager>();
@@ -30,9 +33,25 @@ public class ChecklistManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RoomStatusText.GetComponentInChildren<TextMeshProUGUI>().text = RoomStatus;
+
+        if (UI.stop == 0 && UI.ChoicesInt > 24)
+        {
+            RoomStatus = "Anteroom";
+        }
+
+     }
+
+
+    public void MoveToAnteroom()
+    {
+        RoomStatus = "Anteroom";
     }
 
+    public void ResetRoom()
+    {
+        RoomStatus = "Patient Room";
+    }
     public void N95GenerateChecklist()
     {
         if (UI.stop != 0)

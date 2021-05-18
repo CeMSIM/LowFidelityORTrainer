@@ -23,6 +23,7 @@ public class ExamPPEManager : MonoBehaviour
     public bool EPBool;
     public bool HCBool;
     public bool SCBool;
+    public bool HHBool;
 
     public List<string> DonningChoices;
     public List<string> DoffingChoices;
@@ -35,8 +36,10 @@ public class ExamPPEManager : MonoBehaviour
     public Button EPButton;
     public Button GlovesButton;
     public Button GownButton;
+    public Button HHButton;
 
     public GameObject BeginDoff;
+    public GameObject EndDonning;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,8 @@ public class ExamPPEManager : MonoBehaviour
         GlovesBool = true;
         GownBool = true;
         ButtonActive = true;
+        HHBool = true;
+
 
         Doffing = false;
 
@@ -55,6 +60,8 @@ public class ExamPPEManager : MonoBehaviour
         EUI = ExamManagers.GetComponent<ExamUIManager>();
         CLM = ChecklistManager.GetComponent<ChecklistManager>();
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -68,6 +75,21 @@ public class ExamPPEManager : MonoBehaviour
         {
             ButtonActive = false;
         }
+
+
+
+
+        if (ButtonActive == false && HHBool == true)
+        {
+            HHButton.interactable = true;
+        }
+        else
+        {
+            HHButton.interactable = false;
+        }
+
+
+
 
         if (ButtonActive == false && N95Bool == true)
         {
@@ -134,6 +156,15 @@ public class ExamPPEManager : MonoBehaviour
         }
     }
 
+    public void HandHygieneOn()
+    {
+        HHBool = true;
+    }
+
+    public void HandHygieneOff()
+    {
+        HHBool = false;
+    }
     public void StartDoffing()
     {
         Doffing = true;
@@ -156,6 +187,11 @@ public class ExamPPEManager : MonoBehaviour
             Destroy(obj);
         }
         
+    }
+
+    public void EndDon()
+    {
+        EndDonning.gameObject.SetActive(false);
     }
 
     public void EndDoffing()

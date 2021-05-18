@@ -8,6 +8,7 @@ public class ColorsManager : MonoBehaviour
     private UIManager UI;
     private ExamUIManager EUI;
     private ExamPPEManager EPP;
+    private FinalScreenManager FS;
 
     public GameObject ExamManager;
     public GameObject Manage;
@@ -33,6 +34,7 @@ public class ColorsManager : MonoBehaviour
     public Color AnswerCheckColor;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,7 @@ public class ColorsManager : MonoBehaviour
         EUI = ExamManager.GetComponent<ExamUIManager>();
         UI = Manage.GetComponent<UIManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
+        FS = Manage.GetComponent<FinalScreenManager>();
 
         EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().color = Color.magenta;
 
@@ -261,6 +264,47 @@ public class ColorsManager : MonoBehaviour
         EPMaterial.color = Color.white;
         GlovesMaterial.color = Color.white;
         GownMaterial.color = Color.white;
+    }
+
+
+
+    public void ResetAnswerColors()
+    {
+        
+        for (int i = 0; i < FS.OptionsA.Length; i++ )
+        {
+            if (FS.OptionsA[i].GetComponentInChildren<TextMeshProUGUI>().color == Color.red)
+            {
+                FS.OptionsA[i].GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            }
+        }
+
+
+        for (int j = 0; j < FS.OptionsB.Length; j++)
+        {
+            if (FS.OptionsB[j].GetComponentInChildren<TextMeshProUGUI>().color == Color.red)
+            {
+                FS.OptionsB[j].GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            }
+        }
+
+
+        for (int k = 0; k < FS.OptionsC.Length; k++)
+        {
+            if (FS.OptionsC[k].GetComponentInChildren<TextMeshProUGUI>().color == Color.red)
+            {
+                FS.OptionsC[k].GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            }
+        }
+
+
+        for (int l = 0; l < FS.OptionsD.Length; l++)
+        {
+            if (FS.OptionsD[l].GetComponentInChildren<TextMeshProUGUI>().color == Color.red)
+            {
+                FS.OptionsD[l].GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            }
+        }
     }
 
     

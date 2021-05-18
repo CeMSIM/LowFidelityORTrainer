@@ -125,7 +125,7 @@ public class FinalScreenManager : MonoBehaviour
         
 
         
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
         {
             if (AnswerCText.GetComponentInParent<TextMeshProUGUI>().text != UI.AnswersArrayC[i])
             {
@@ -170,6 +170,9 @@ public class FinalScreenManager : MonoBehaviour
         }
         z = 0;
     }
+
+
+
 
     //Creating functions that allow the player to see each final review screen
     public void ViewN95Don()

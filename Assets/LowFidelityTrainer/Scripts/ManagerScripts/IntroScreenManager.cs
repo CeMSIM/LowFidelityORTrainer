@@ -10,15 +10,20 @@ public class IntroScreenManager : MonoBehaviour
 
     public GameObject IntroScreen;
     public GameObject Manager;
+    public GameObject ExamManager;
 
     public GameObject BeginDoffing;
     public GameObject EndDoffing;
 
+    public GameObject SelectProcedure;
+
     private UIManager UI;
+    private ExamPPEManager EPP;
     void Start()
     {
         //Acessing the UIManager Script
         UI = Manager.GetComponent<UIManager>();
+        EPP = ExamManager.GetComponent<ExamPPEManager>();
     }
 
     // Update is called once per frame
@@ -28,11 +33,18 @@ public class IntroScreenManager : MonoBehaviour
         if (UI.stop == 1)
         {
             UI.AnswerCheck.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            UI.UndoButton.gameObject.SetActive(false);
         }
 
     }
 
+
     //Functions to activate the chosen quiz mode
+
+    public void ProcedureChoice()
+    {
+        SelectProcedure.gameObject.SetActive(false);
+    }
     public void ActivateTutorial()
     {
 
@@ -41,6 +53,8 @@ public class IntroScreenManager : MonoBehaviour
         Exam_Track.gameObject.SetActive(false);
         BeginDoffing.gameObject.SetActive(false);
         EndDoffing.gameObject.SetActive(false);
+        EPP.EndDonning.SetActive(false);
+       
         
         
     }

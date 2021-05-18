@@ -144,6 +144,15 @@ public class ExamUIManager : MonoBehaviour
         EPP.EPBool = true;
         EPP.GlovesBool = true;
         EPP.GownBool = true;
+
+
+        N95DonWrongCount = 0;
+        GownDonWrongCount = 0;
+        GlovesDonWrongCount = 0;
+        N95DoffWrongCount = 0;
+        GownDoffWrongCount = 0;
+        GlovesDoffWrongCount = 0;
+
         foreach (var obj in EPP.ChecklistObjects)
         {
             Destroy(obj);
