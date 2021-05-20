@@ -7,6 +7,7 @@ TagManager:
   - ResultsCanvas
   - MainCanvas
   - Checklist
+  - ChecklistCheck
   layers:
   - Default
   - TransparentFX

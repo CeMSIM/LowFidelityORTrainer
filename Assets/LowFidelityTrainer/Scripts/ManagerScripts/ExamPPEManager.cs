@@ -192,11 +192,20 @@ public class ExamPPEManager : MonoBehaviour
     public void EndDon()
     {
         EndDonning.gameObject.SetActive(false);
+
+        N95Bool = false;
+        GownBool = false;
+        GlovesBool = false;
+        EPBool = false;
+        HCBool = false;
+        SCBool = false;
     }
 
     public void EndDoffing()
     {
         UI.FinalBG.gameObject.SetActive(true);
+        CLM.ChecklistComparison.SetActive(true);
+        
     }
 
 
