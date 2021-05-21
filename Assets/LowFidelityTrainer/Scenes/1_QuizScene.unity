@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3233429}
   - component: {fileID: 3233428}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_To_main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,7 +2050,7 @@ GameObject:
   - component: {fileID: 82230423}
   - component: {fileID: 82230422}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2711,7 +2711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104428050}
   m_Layer: 5
-  m_Name: Answer Buttons
+  m_Name: Answer_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2733,6 +2733,7 @@ RectTransform:
   - {fileID: 42895236}
   - {fileID: 1674088486}
   - {fileID: 746588651}
+  - {fileID: 1912421646}
   m_Father: {fileID: 501694846}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3319,7 +3320,7 @@ GameObject:
   - component: {fileID: 123940739}
   - component: {fileID: 123940738}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Info_Text_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3399,7 +3400,7 @@ GameObject:
   - component: {fileID: 125948351}
   - component: {fileID: 125948350}
   m_Layer: 5
-  m_Name: Reset Button
+  m_Name: Reset_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3419,7 +3420,7 @@ RectTransform:
   m_Children:
   - {fileID: 644080194}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3710,7 +3711,7 @@ GameObject:
   - component: {fileID: 130941677}
   - component: {fileID: 130941676}
   m_Layer: 5
-  m_Name: QuestionInfoText
+  m_Name: Question_Info_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4243,7 +4244,7 @@ GameObject:
   - component: {fileID: 157661077}
   - component: {fileID: 157661076}
   m_Layer: 5
-  m_Name: Quest Text
+  m_Name: Quest_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4456,7 +4457,7 @@ GameObject:
   - component: {fileID: 170122424}
   - component: {fileID: 170122423}
   m_Layer: 5
-  m_Name: Activate_Gloves_Results (2)
+  m_Name: Activate_Gloves_Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4985,7 +4986,7 @@ GameObject:
   - component: {fileID: 205819437}
   - component: {fileID: 205819436}
   m_Layer: 5
-  m_Name: HHTextMesh
+  m_Name: Hand_Hygiene_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5388,7 +5389,7 @@ GameObject:
   - component: {fileID: 207592340}
   - component: {fileID: 207592339}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Other_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5792,7 +5793,7 @@ GameObject:
   - component: {fileID: 212970832}
   - component: {fileID: 212970831}
   m_Layer: 5
-  m_Name: AnswerDTextMesh
+  m_Name: AnswerD_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6082,7 +6083,7 @@ RectTransform:
   m_Children:
   - {fileID: 1320840493}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6259,7 +6260,7 @@ GameObject:
   - component: {fileID: 240867462}
   - component: {fileID: 240867461}
   m_Layer: 5
-  m_Name: Activate_Gloves_Doffing_Results (3)
+  m_Name: Activate_Gloves_Doffing_Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6388,7 +6389,7 @@ GameObject:
   - component: {fileID: 243475580}
   - component: {fileID: 243475579}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_To_Main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6619,7 +6620,7 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.81, z: 1}
   m_Children: []
   m_Father: {fileID: 501694846}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6948,7 +6949,7 @@ GameObject:
   - component: {fileID: 285290154}
   - component: {fileID: 285290153}
   m_Layer: 5
-  m_Name: AnswerCTextMesh
+  m_Name: AnswerC_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7187,7 +7188,7 @@ GameObject:
   - component: {fileID: 303335281}
   - component: {fileID: 303335280}
   m_Layer: 5
-  m_Name: Gloves_Donning_Percentage (4)
+  m_Name: Gloves_Donning_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7706,7 +7707,7 @@ GameObject:
   - component: {fileID: 347720960}
   - component: {fileID: 347720959}
   m_Layer: 5
-  m_Name: HCTextMesh
+  m_Name: Head_Cover_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8641,7 +8642,7 @@ GameObject:
   - component: {fileID: 408424844}
   - component: {fileID: 408424843}
   m_Layer: 5
-  m_Name: MainMenuButtonText
+  m_Name: Main_Menu_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9443,7 +9444,7 @@ GameObject:
   - component: {fileID: 453136823}
   - component: {fileID: 453136822}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gown_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9577,7 +9578,7 @@ GameObject:
   - component: {fileID: 456225635}
   - component: {fileID: 456225634}
   m_Layer: 5
-  m_Name: Activate_Gown_Results (1)
+  m_Name: Activate_Gown_Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10632,7 +10633,7 @@ GameObject:
   - component: {fileID: 490358117}
   - component: {fileID: 490358116}
   m_Layer: 5
-  m_Name: UndoTextMesh
+  m_Name: Undo_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11069,7 +11070,6 @@ RectTransform:
   - {fileID: 1812183207}
   - {fileID: 157661075}
   - {fileID: 104428050}
-  - {fileID: 1912421646}
   - {fileID: 125948349}
   - {fileID: 2100404801}
   - {fileID: 266576053}
@@ -12224,7 +12224,7 @@ GameObject:
   - component: {fileID: 613806302}
   - component: {fileID: 613806301}
   m_Layer: 5
-  m_Name: Activate_Gown_Doffing_Results (2)
+  m_Name: Activate_Gown_Doffing_Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12958,7 +12958,7 @@ GameObject:
   - component: {fileID: 644080196}
   - component: {fileID: 644080195}
   m_Layer: 5
-  m_Name: ResetTextMesh
+  m_Name: Reset_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13440,7 +13440,7 @@ GameObject:
   - component: {fileID: 657997662}
   - component: {fileID: 657997661}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_To_main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15905,7 +15905,7 @@ GameObject:
   - component: {fileID: 809090325}
   - component: {fileID: 809090324}
   m_Layer: 5
-  m_Name: EPTextMesh
+  m_Name: Eye_Protection_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16175,7 +16175,7 @@ GameObject:
   - component: {fileID: 819635989}
   - component: {fileID: 819635988}
   m_Layer: 5
-  m_Name: Gown_Donning_Percentage (5)
+  m_Name: Gown_Donning_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16503,7 +16503,7 @@ GameObject:
   - component: {fileID: 866174535}
   - component: {fileID: 866174536}
   m_Layer: 5
-  m_Name: AnswerBTextMesh
+  m_Name: AnswerB_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16980,7 +16980,7 @@ GameObject:
   - component: {fileID: 885690036}
   - component: {fileID: 885690035}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: End_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18956,7 +18956,7 @@ RectTransform:
   m_Children:
   - {fileID: 2078464264}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19598,7 +19598,7 @@ GameObject:
   - component: {fileID: 1069406677}
   - component: {fileID: 1069406676}
   m_Layer: 5
-  m_Name: Gown_Doffing_Percentage (2)
+  m_Name: Gown_Doffing_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19997,7 +19997,7 @@ GameObject:
   - component: {fileID: 1079978470}
   - component: {fileID: 1079978469}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gloves_Donning_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21184,7 +21184,7 @@ GameObject:
   - component: {fileID: 1191425549}
   - component: {fileID: 1191425548}
   m_Layer: 5
-  m_Name: N95 Respirator
+  m_Name: N95_Respirator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21827,7 +21827,7 @@ GameObject:
   - component: {fileID: 1205109106}
   - component: {fileID: 1205109105}
   m_Layer: 5
-  m_Name: Shoe_Cover_TextMesh
+  m_Name: Shoe_Covers_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22500,7 +22500,7 @@ GameObject:
   - component: {fileID: 1280861912}
   - component: {fileID: 1280861911}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Exit_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23158,7 +23158,7 @@ GameObject:
   - component: {fileID: 1305165013}
   - component: {fileID: 1305165012}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: End_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23291,7 +23291,7 @@ GameObject:
   - component: {fileID: 1310770033}
   - component: {fileID: 1310770032}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gloves_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23424,7 +23424,7 @@ GameObject:
   - component: {fileID: 1320840495}
   - component: {fileID: 1320840494}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Begin_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24076,7 +24076,7 @@ GameObject:
   - component: {fileID: 1335320219}
   - component: {fileID: 1335320218}
   m_Layer: 5
-  m_Name: ShoeCovers
+  m_Name: Shoe_Covers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24259,7 +24259,7 @@ GameObject:
   - component: {fileID: 1340078697}
   - component: {fileID: 1340078696}
   m_Layer: 5
-  m_Name: N95TextMesh
+  m_Name: N95_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25898,7 +25898,7 @@ GameObject:
   - component: {fileID: 1459812234}
   - component: {fileID: 1459812233}
   m_Layer: 5
-  m_Name: Hand Hygiene
+  m_Name: Hand_Hygiene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26000,7 +26000,7 @@ GameObject:
   - component: {fileID: 1460127203}
   - component: {fileID: 1460127202}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_To_Main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28227,7 +28227,7 @@ GameObject:
   - component: {fileID: 1574729880}
   - component: {fileID: 1574729879}
   m_Layer: 5
-  m_Name: MainMenuButton
+  m_Name: Main_Menu_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28246,7 +28246,7 @@ RectTransform:
   m_Children:
   - {fileID: 408424842}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -28621,7 +28621,7 @@ GameObject:
   - component: {fileID: 1597765989}
   - component: {fileID: 1597765988}
   m_Layer: 5
-  m_Name: Head Covers
+  m_Name: Head_Covers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30028,7 +30028,7 @@ GameObject:
   - component: {fileID: 1691653581}
   - component: {fileID: 1691653580}
   m_Layer: 5
-  m_Name: N95_Doffing_Percentage (1)
+  m_Name: N95_Doffing_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30905,7 +30905,7 @@ RectTransform:
   m_Children:
   - {fileID: 885690034}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31691,7 +31691,7 @@ RectTransform:
   m_Children:
   - {fileID: 1305165011}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31812,7 +31812,7 @@ GameObject:
   - component: {fileID: 1798623794}
   - component: {fileID: 1798623793}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: N95_Donning_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32005,7 +32005,7 @@ GameObject:
   - component: {fileID: 1800200935}
   - component: {fileID: 1800200934}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gown_Donning_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32810,7 +32810,7 @@ GameObject:
   - component: {fileID: 1889998663}
   - component: {fileID: 1889998662}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: N95_Doffing_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32945,7 +32945,7 @@ GameObject:
   - component: {fileID: 1893338869}
   - component: {fileID: 1893338868}
   m_Layer: 5
-  m_Name: Eye Protection
+  m_Name: Eye_Protection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33047,7 +33047,7 @@ GameObject:
   - component: {fileID: 1895393626}
   - component: {fileID: 1895393625}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_To_Main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33737,7 +33737,7 @@ RectTransform:
   m_Children:
   - {fileID: 1280861910}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -33863,13 +33863,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912421645}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490358115}
-  m_Father: {fileID: 501694846}
-  m_RootOrder: 5
+  m_Father: {fileID: 104428050}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -35639,7 +35639,7 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.81, z: 1}
   m_Children: []
   m_Father: {fileID: 501694846}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -35888,7 +35888,7 @@ GameObject:
   - component: {fileID: 2026773847}
   - component: {fileID: 2026773846}
   m_Layer: 5
-  m_Name: GlovesTextMesh
+  m_Name: Gloves_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36024,7 +36024,7 @@ GameObject:
   - component: {fileID: 2030867742}
   - component: {fileID: 2030867741}
   m_Layer: 5
-  m_Name: Gloves_Doffing_Percentage (3)
+  m_Name: Gloves_Doffing_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36291,7 +36291,7 @@ GameObject:
   - component: {fileID: 2040954322}
   - component: {fileID: 2040954321}
   m_Layer: 5
-  m_Name: AnswerATextMesh
+  m_Name: AnswerA_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36878,7 +36878,7 @@ GameObject:
   - component: {fileID: 2062078890}
   - component: {fileID: 2062078889}
   m_Layer: 5
-  m_Name: Activate_N95_Doffing_Results (1)
+  m_Name: Activate_N95_Doffing_Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37221,7 +37221,7 @@ GameObject:
   - component: {fileID: 2078464266}
   - component: {fileID: 2078464265}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Anteroom_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37355,7 +37355,7 @@ GameObject:
   - component: {fileID: 2081430443}
   - component: {fileID: 2081430442}
   m_Layer: 5
-  m_Name: GownTextMesh
+  m_Name: Gown_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37780,7 +37780,7 @@ RectTransform:
   - {fileID: 614543678}
   - {fileID: 199172657}
   m_Father: {fileID: 501694846}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -37929,7 +37929,7 @@ GameObject:
   - component: {fileID: 2118041664}
   - component: {fileID: 2118041663}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Return_to_Main_BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
