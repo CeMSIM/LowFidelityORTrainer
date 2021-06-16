@@ -146,14 +146,25 @@ public class UIManager : MonoBehaviour
     public GameObject N95DoffFraction;
     public GameObject GownDoffFraction;
     public GameObject GlovesDoffFraction;
-
+    [Space]
+    public Button N95Button;
+    public Button HHButton;
+    public Button EPButton;
+    public Button HCButton;
+    public Button SCButton;
+    public Button GownButton;
+    public Button GlovesButton;
+    [Space]
     public GameObject ColorManager;
+    public GameObject Manager;
 
     private ColorsManager ColorsM;
+    private RSIManager RSI;
     private void Start()
     {
 
         ColorsM = ColorManager.GetComponent<ColorsManager>();
+        RSI = Manager.GetComponent<RSIManager>();
 
         //Integer used to prevent UIManager and ExamUIManager from conflicting
         stop = 0;
@@ -233,9 +244,29 @@ public class UIManager : MonoBehaviour
 
         //if tutorial is chosen, then the numbers and questions will correspond accordingly
         
-        
-
-        //Settinng the respective cecklist game objects to true once the PPE object is donned or doffed
+        //Making sure the PPE items cannot be selected during RSI
+        if (RSI.IQBool == false && RSI.SGABool == false)
+        {
+            N95Button.interactable = true;
+            HHButton.interactable = true;
+            EPButton.interactable = true;
+            SCButton.interactable = true;
+            HCButton.interactable = true;
+            GownButton.interactable = true;
+            GlovesButton.interactable = true;
+        }
+        else
+        {
+            N95Button.interactable = false;
+            HHButton.interactable = false;
+            EPButton.interactable = false;
+            SCButton.interactable = false;
+            HCButton.interactable = false;
+            GownButton.interactable = false;
+            GlovesButton.interactable = false;
+        }
+        //
+        //Setting the respective cecklist game objects to true once the PPE object is donned or doffed
         if (stop == 0)
         {
             N95DonFraction.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -461,7 +492,18 @@ public class UIManager : MonoBehaviour
                 y += 1;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 ColorsM.AnswerCheckColor = Color.green;
-                ChoicesInt += 1;
+                if(RSI.SGABool == false && RSI.IQBool == false)
+                {
+                    ChoicesInt += 1;
+                }
+                else if (RSI.SGABool == true && RSI.IQBool == false)
+                {
+                    RSI.SGA += 1;
+                }
+                else if (RSI.SGABool == false && RSI.IQBool == true)
+                {
+                    RSI.IQ += 1;
+                }
             }
             if (y < 1)
             {
@@ -484,9 +526,20 @@ public class UIManager : MonoBehaviour
                 ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
-               
-    
-                ChoicesInt += 1;
+
+
+                if (RSI.SGABool == false && RSI.IQBool == false)
+                {
+                    ChoicesInt += 1;
+                }
+                else if (RSI.SGABool == true && RSI.IQBool == false)
+                {
+                    RSI.SGA += 1;
+                }
+                else if (RSI.SGABool == false && RSI.IQBool == true)
+                {
+                    RSI.IQ += 1;
+                }
             }
             if (y < 1)
             {
@@ -507,9 +560,20 @@ public class UIManager : MonoBehaviour
                 ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
-                
-                
-                ChoicesInt += 1;
+
+
+                if (RSI.SGABool == false && RSI.IQBool == false)
+                {
+                    ChoicesInt += 1;
+                }
+                else if (RSI.SGABool == true && RSI.IQBool == false)
+                {
+                    RSI.SGA += 1;
+                }
+                else if (RSI.SGABool == false && RSI.IQBool == true)
+                {
+                    RSI.IQ += 1;
+                }
             }
 
             if (y< 1)
@@ -530,9 +594,20 @@ public class UIManager : MonoBehaviour
                 ColorsM.AnswerCheckColor = Color.green;
                 AnswerCheck.GetComponentInParent<TextMeshProUGUI>().text = "Correct";
                 y += 1;
-               
-                
-                ChoicesInt += 1;
+
+
+                if (RSI.SGABool == false && RSI.IQBool == false)
+                {
+                    ChoicesInt += 1;
+                }
+                else if (RSI.SGABool == true && RSI.IQBool == false)
+                {
+                    RSI.SGA += 1;
+                }
+                else if (RSI.SGABool == false && RSI.IQBool == true)
+                {
+                    RSI.IQ += 1;
+                }
             }
 
             if (y < 1)

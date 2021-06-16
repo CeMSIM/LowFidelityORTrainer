@@ -14,13 +14,17 @@ public class IntroScreenManager : MonoBehaviour
 
     public GameObject BeginDoffing;
     public GameObject EndDoffing;
+    public GameObject EndDonning;
 
     public GameObject SelectProcedure;
 
     private UIManager UI;
     private ExamPPEManager EPP;
+
+    public bool TutorialBool;
     void Start()
     {
+        TutorialBool = false;
         //Acessing the UIManager Script
         UI = Manager.GetComponent<UIManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
@@ -47,13 +51,13 @@ public class IntroScreenManager : MonoBehaviour
     }
     public void ActivateTutorial()
     {
-
+        TutorialBool = true;
         Tutorial_Track.gameObject.SetActive(true);
         IntroScreen.gameObject.SetActive(false);
         Exam_Track.gameObject.SetActive(false);
         BeginDoffing.gameObject.SetActive(false);
         EndDoffing.gameObject.SetActive(false);
-        EPP.EndDonning.SetActive(false);
+        EndDonning.SetActive(false);
        
         
         

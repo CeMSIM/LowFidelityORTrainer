@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
-  m_Name: Donning completion
+  m_Name: 4. What should be done once the circuit is connected to the ETT
   m_EditorClassIdentifier: 
-  _info: 'ing sequence completed, now select End Donning to begin RSI and select
-    Begin Doffing once you have completed RSI '
-  _answerA: 
-  _answerB: 
-  _answerC: 
-  _answerD: 
-  _questText: 'Next, Doff The:'
-  _currentObject: Shoe Covers
+  _info: What should be done once the circuit is connected to the ETT?
+  _answerA: Secure the ETT with tape
+  _answerB: Begin sanitization of the room
+  _answerC: Sanitize the ETT
+  _answerD: Tighten the ETT using screws
+  _questText: 
+  _currentObject: 
   _currentNumber: 

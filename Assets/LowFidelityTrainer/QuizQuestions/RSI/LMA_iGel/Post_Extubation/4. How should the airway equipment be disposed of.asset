@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
-  m_Name: Donning completion
+  m_Name: 4. How should the airway equipment be disposed of
   m_EditorClassIdentifier: 
-  _info: 'ing sequence completed, now select End Donning to begin RSI and select
-    Begin Doffing once you have completed RSI '
-  _answerA: 
-  _answerB: 
-  _answerC: 
-  _answerD: 
-  _questText: 'Next, Doff The:'
-  _currentObject: Shoe Covers
+  _info: How should the used disposable airway equipment be disposed of?
+  _answerA: Placed in the biohazard bin
+  _answerB: Discarded in the trash bin
+  _answerC: Place immediately into trash bag post extubation, rolled up and discarded
+  _answerD: None of the above
+  _questText: 
+  _currentObject: 
   _currentNumber: 

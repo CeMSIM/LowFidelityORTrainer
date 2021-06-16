@@ -13,6 +13,7 @@ public class ExamUIManager : MonoBehaviour
 
     private UIManager UI;
     private ExamPPEManager EPP;
+    private RSIManager RSIM;
 
     public GameObject Managers;
     public GameObject ExamManagers;
@@ -63,6 +64,7 @@ public class ExamUIManager : MonoBehaviour
         //Accesing other scripts
         UI = Managers.GetComponent<UIManager>();
         EPP = ExamManagers.GetComponent<ExamPPEManager>();
+        RSIM = Managers.GetComponent<RSIManager>();
 
 
         ExamChoicesInt = 0;
@@ -125,7 +127,10 @@ public class ExamUIManager : MonoBehaviour
     //Functions to manage the choices
     public void ChangeExamOptions()
     {
-        ExamChoicesInt += 1;
+        if (RSIM.IQBool == false && RSIM.SGABool == false)
+        {
+            ExamChoicesInt += 1;
+        }
     }
 
     public void UndoExamButton()

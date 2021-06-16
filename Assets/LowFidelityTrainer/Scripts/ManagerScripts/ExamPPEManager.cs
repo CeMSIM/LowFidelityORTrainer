@@ -13,6 +13,7 @@ public class ExamPPEManager : MonoBehaviour
     private UIManager UI;
     private ExamUIManager EUI;
     private ChecklistManager CLM;
+    private RSIManager RSIM;
 
     public bool Doffing;
     private bool ButtonActive;
@@ -59,6 +60,7 @@ public class ExamPPEManager : MonoBehaviour
         UI = Managers.GetComponent<UIManager>();
         EUI = ExamManagers.GetComponent<ExamUIManager>();
         CLM = ChecklistManager.GetComponent<ChecklistManager>();
+        RSIM = Managers.GetComponent<RSIManager>();
     }
 
 
@@ -79,7 +81,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && HHBool == true)
+        if (ButtonActive == false && HHBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             HHButton.interactable = true;
         }
@@ -91,7 +93,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && N95Bool == true)
+        if (ButtonActive == false && N95Bool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             N95Button.interactable = true;
         }
@@ -101,7 +103,7 @@ public class ExamPPEManager : MonoBehaviour
         }
 
 
-        if (ButtonActive == false && HCBool == true)
+        if (ButtonActive == false && HCBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             HCButton.interactable = true;
         }
@@ -112,7 +114,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && SCBool == true)
+        if (ButtonActive == false && SCBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             SCButton.interactable = true;
         }
@@ -123,7 +125,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && EPBool == true)
+        if (ButtonActive == false && EPBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             EPButton.interactable = true;
         }
@@ -135,7 +137,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && GownBool == true)
+        if (ButtonActive == false && GownBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             GownButton.interactable = true;
         }
@@ -146,7 +148,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && GlovesBool == true)
+        if (ButtonActive == false && GlovesBool == true && RSIM.IQBool == false && RSIM.SGABool== false)
         {
             GlovesButton.interactable = true;
         }
@@ -177,6 +179,8 @@ public class ExamPPEManager : MonoBehaviour
         HCBool = true;
         SCBool = true;
 
+        RSIM.IQBool = false;
+        RSIM.SGABool = false;
         CLM.ChecklistTextPosition = 125;
         CLM.HHCount = 0;
 

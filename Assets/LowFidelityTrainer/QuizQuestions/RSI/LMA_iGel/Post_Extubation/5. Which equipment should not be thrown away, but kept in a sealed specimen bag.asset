@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
-  m_Name: Donning completion
+  m_Name: 5. Which equipment should not be thrown away, but kept in a sealed specimen
+    bag
   m_EditorClassIdentifier: 
-  _info: 'ing sequence completed, now select End Donning to begin RSI and select
-    Begin Doffing once you have completed RSI '
-  _answerA: 
-  _answerB: 
-  _answerC: 
-  _answerD: 
-  _questText: 'Next, Doff The:'
-  _currentObject: Shoe Covers
+  _info: Which equipment should not be thrown away, but kept in a sealed specimen
+    bag?
+  _answerA: ETT
+  _answerB: Laryngoscopes
+  _answerC: Temp Probe
+  _answerD: Bite block
+  _questText: 
+  _currentObject: 
   _currentNumber: 
