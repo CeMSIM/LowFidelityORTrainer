@@ -68,6 +68,7 @@ public class ExamPPEManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (UI.AnswerButtons.activeSelf)
         {
@@ -101,6 +102,10 @@ public class ExamPPEManager : MonoBehaviour
         {
             N95Button.interactable = false;
         }
+
+
+       
+        
 
 
         if (ButtonActive == false && HCBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
@@ -148,7 +153,7 @@ public class ExamPPEManager : MonoBehaviour
 
 
 
-        if (ButtonActive == false && GlovesBool == true && RSIM.IQBool == false && RSIM.SGABool== false)
+        if (ButtonActive == false && GlovesBool == true && RSIM.IQBool == false && RSIM.SGABool == false)
         {
             GlovesButton.interactable = true;
         }
@@ -203,12 +208,16 @@ public class ExamPPEManager : MonoBehaviour
         EPBool = false;
         HCBool = false;
         SCBool = false;
+
+
     }
 
     public void EndDoffing()
     {
         UI.FinalBG.gameObject.SetActive(true);
         CLM.ChecklistComparison.SetActive(true);
+        RSIM.IntubationBG.gameObject.SetActive(true);
+        RSIM.SGABG.gameObject.SetActive(true);
         
     }
 

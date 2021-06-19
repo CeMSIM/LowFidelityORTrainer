@@ -244,27 +244,7 @@ public class UIManager : MonoBehaviour
 
         //if tutorial is chosen, then the numbers and questions will correspond accordingly
         
-        //Making sure the PPE items cannot be selected during RSI
-        if (RSI.IQBool == false && RSI.SGABool == false)
-        {
-            N95Button.interactable = true;
-            HHButton.interactable = true;
-            EPButton.interactable = true;
-            SCButton.interactable = true;
-            HCButton.interactable = true;
-            GownButton.interactable = true;
-            GlovesButton.interactable = true;
-        }
-        else
-        {
-            N95Button.interactable = false;
-            HHButton.interactable = false;
-            EPButton.interactable = false;
-            SCButton.interactable = false;
-            HCButton.interactable = false;
-            GownButton.interactable = false;
-            GlovesButton.interactable = false;
-        }
+
         //
         //Setting the respective cecklist game objects to true once the PPE object is donned or doffed
         if (stop == 0)

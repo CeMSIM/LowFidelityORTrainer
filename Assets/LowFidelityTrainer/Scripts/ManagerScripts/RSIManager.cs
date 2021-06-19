@@ -23,6 +23,15 @@ public class RSIManager : MonoBehaviour
     public bool SGABool;
 
     public GameObject RSIChoice;
+
+    public GameObject ExtubationResults;
+    public GameObject IntubationResults;
+    public GameObject PostExtubationResults;
+    public GameObject SGAResults;
+    public GameObject PostSGAResults;
+    public GameObject IntubationBG;
+    public GameObject SGABG;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +40,14 @@ public class RSIManager : MonoBehaviour
         RSIChoice.gameObject.SetActive(false);
         IQBool = false;
         SGABool = false;
+
+        ExtubationResults.gameObject.SetActive(false);
+        IntubationResults.gameObject.SetActive(false);
+        PostExtubationResults.gameObject.SetActive(false);
+        SGAResults.gameObject.SetActive(false);
+        PostSGAResults.gameObject.SetActive(false);
+        IntubationBG.gameObject.SetActive(false);
+        SGABG.gameObject.SetActive(false);
 
         UI = Manager.GetComponent<UIManager>();
         EUI = ExamManager.GetComponent<ExamUIManager>();
@@ -52,6 +69,11 @@ public class RSIManager : MonoBehaviour
             EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = "TBD";
             UI.AnswerButtons.gameObject.SetActive(true);
+
+            SGAResults.gameObject.SetActive(false);
+            PostSGAResults.gameObject.SetActive(false);
+            SGABG.gameObject.SetActive(false);
+
         }
 
 
@@ -66,6 +88,8 @@ public class RSIManager : MonoBehaviour
             EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = "TBD";
             UI.AnswerButtons.gameObject.SetActive(true);
+
+            IntubationBG.gameObject.SetActive(false);
         }
 
 
@@ -114,5 +138,57 @@ public class RSIManager : MonoBehaviour
     public void ActivateRSI()
     {
         RSIChoice.gameObject.SetActive(true);
+    }
+
+    public void ReturnToMainRSI()
+    {
+        ExtubationResults.gameObject.SetActive(false);
+        IntubationResults.gameObject.SetActive(false);
+        PostExtubationResults.gameObject.SetActive(false);
+        SGAResults.gameObject.SetActive(false);
+        PostSGAResults.gameObject.SetActive(false);
+        SGABG.gameObject.SetActive(true);
+        IntubationBG.gameObject.SetActive(true);
+    }
+
+
+    public void ActivateIR()
+    {
+        IntubationResults.gameObject.SetActive(true);
+    }
+
+    public void ActivateER()
+    {
+        ExtubationResults.gameObject.SetActive(true);
+        IntubationBG.gameObject.SetActive(false);
+        SGABG.gameObject.SetActive(false);
+    }
+
+    public void ActivatePER()
+    {
+        PostExtubationResults.gameObject.SetActive(true);
+    }
+
+    public void ActivateSGAR()
+    {
+        SGAResults.gameObject.SetActive(true);
+        SGABG.gameObject.SetActive(false);
+    }
+
+    public void ActivatePSGAR()
+    {
+        PostSGAResults.gameObject.SetActive(true);
+        SGABG.gameObject.SetActive(false);
+    }
+
+    public void FinishRSIReview()
+    {
+        ExtubationResults.gameObject.SetActive(false);
+        IntubationResults.gameObject.SetActive(false);
+        PostExtubationResults.gameObject.SetActive(false);
+        SGAResults.gameObject.SetActive(false);
+        PostSGAResults.gameObject.SetActive(false);
+        IntubationBG.gameObject.SetActive(false);
+        SGABG.gameObject.SetActive(false);
     }
 }
