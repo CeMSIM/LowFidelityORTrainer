@@ -17,6 +17,7 @@ MonoBehaviour:
   _answerB: 
   _answerC: 
   _answerD: 
-  _questText: Doffing completed, you may now exit the simulator
-  _useTimer: 0
-  _timer: 0
+  _questText: Doffing completed, you may now select "End Doffing" to go to the review
+    screens
+  _currentObject: 
+  _currentNumber: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6. Which equipment should not be thrown away, but kept in a sealed specimen
     bag
   m_EditorClassIdentifier: 
-  _info: Which equipment should not be thrown away, but kept in a sealed specimen
+  _info: Which equipment should NOT be thrown away, but kept in a sealed specimen
     bag?
   _answerA: ETT
   _answerB: Laryngoscopes

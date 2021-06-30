@@ -157,14 +157,24 @@ public class UIManager : MonoBehaviour
     [Space]
     public GameObject ColorManager;
     public GameObject Manager;
+    public GameObject ExamManager;
 
     private ColorsManager ColorsM;
     private RSIManager RSI;
+    private IntroScreenManager IS;
+    private ExamPPEManager EPP;
+    private ExamUIManager EUI;
+    [Space]
+    public bool BeginDoffBool;
     private void Start()
     {
+        BeginDoffBool = true;
 
         ColorsM = ColorManager.GetComponent<ColorsManager>();
         RSI = Manager.GetComponent<RSIManager>();
+        IS = Manager.GetComponent<IntroScreenManager>();
+        EPP = ExamManager.GetComponent<ExamPPEManager>();
+        EUI = ExamManager.GetComponent<ExamUIManager>();
 
         //Integer used to prevent UIManager and ExamUIManager from conflicting
         stop = 0;
@@ -236,11 +246,9 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
 
-        if (ChoicesInt > 15 && stop == 0)
-        {
+
             UndoButton.gameObject.SetActive(false);
 
-        }
 
         //if tutorial is chosen, then the numbers and questions will correspond accordingly
         
@@ -434,7 +442,10 @@ public class UIManager : MonoBehaviour
 
             if (ChoicesInt > 33)
             {
-                FinalBG.gameObject.SetActive(true);
+                EPP.EndDoff.gameObject.SetActive(true);
+               // RSI.IntubationBG.gameObject.SetActive(true);
+              //  RSI.SGABG.gameObject.SetActive(true);
+              //  FinalBG.gameObject.SetActive(true);
             }
         }
             if (uIElements.AnswerAInfoTextObject.text == "")
@@ -459,6 +470,42 @@ public class UIManager : MonoBehaviour
             uIElements.CurrentNumberText.text = TextInfo[ChoicesInt].CurrentNumber;
         }
 
+
+        if (IS.TutorialBool == true)
+        {
+
+            if(BeginDoffBool == true && RSI.IQ == 12)
+            {
+                EPP.BeginDoff.gameObject.SetActive(true);
+            }
+            else if (BeginDoffBool == true && RSI.SGA == 9)
+            {
+                EPP.BeginDoff.gameObject.SetActive(true);
+            }
+            else
+            {
+                EPP.BeginDoff.gameObject.SetActive(false);
+            }
+
+
+            if (EPP.EndDonning.activeSelf)
+            {
+                EPP.EndDonningBool = true;
+            }
+            else
+            {
+                EPP.EndDonningBool = false;
+            }
+
+            if (EPP.EndDonningBool == true)
+            {
+                EPP.SCButton.interactable = false;
+            }
+            else
+            {
+                EPP.SCButton.interactable = true;
+            }
+        }
     }
 
     public void ChangeOptionsA()
@@ -476,11 +523,11 @@ public class UIManager : MonoBehaviour
                 {
                     ChoicesInt += 1;
                 }
-                else if (RSI.SGABool == true && RSI.IQBool == false)
+                else if (RSI.SGABool == true && RSI.IQBool == false && IS.TutorialBool == true)
                 {
                     RSI.SGA += 1;
                 }
-                else if (RSI.SGABool == false && RSI.IQBool == true)
+                else if (RSI.SGABool == false && RSI.IQBool == true && IS.TutorialBool == true)
                 {
                     RSI.IQ += 1;
                 }
@@ -512,11 +559,11 @@ public class UIManager : MonoBehaviour
                 {
                     ChoicesInt += 1;
                 }
-                else if (RSI.SGABool == true && RSI.IQBool == false)
+                else if (RSI.SGABool == true && RSI.IQBool == false && IS.TutorialBool == true)
                 {
                     RSI.SGA += 1;
                 }
-                else if (RSI.SGABool == false && RSI.IQBool == true)
+                else if (RSI.SGABool == false && RSI.IQBool == true && IS.TutorialBool == true)
                 {
                     RSI.IQ += 1;
                 }
@@ -546,11 +593,11 @@ public class UIManager : MonoBehaviour
                 {
                     ChoicesInt += 1;
                 }
-                else if (RSI.SGABool == true && RSI.IQBool == false)
+                else if (RSI.SGABool == true && RSI.IQBool == false && IS.TutorialBool == true)
                 {
                     RSI.SGA += 1;
                 }
-                else if (RSI.SGABool == false && RSI.IQBool == true)
+                else if (RSI.SGABool == false && RSI.IQBool == true && IS.TutorialBool == true)
                 {
                     RSI.IQ += 1;
                 }
@@ -580,11 +627,11 @@ public class UIManager : MonoBehaviour
                 {
                     ChoicesInt += 1;
                 }
-                else if (RSI.SGABool == true && RSI.IQBool == false)
+                else if (RSI.SGABool == true && RSI.IQBool == false && IS.TutorialBool == true)
                 {
                     RSI.SGA += 1;
                 }
-                else if (RSI.SGABool == false && RSI.IQBool == true)
+                else if (RSI.SGABool == false && RSI.IQBool == true && IS.TutorialBool == true)
                 {
                     RSI.IQ += 1;
                 }

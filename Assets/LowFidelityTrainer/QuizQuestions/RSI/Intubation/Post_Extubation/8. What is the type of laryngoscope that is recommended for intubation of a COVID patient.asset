@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 8. What is the type of laryngoscope that is recommended for intubation
     of a COVID patient
   m_EditorClassIdentifier: 
-  _info: What is the type of laryngoscope that is recommended for intubation of a
-    COVID patient?
+  _info: What is the type of laryngoscope that is recommended as the first choice
+    for intubation of a COVID patient?
   _answerA: Video Laryngoscope
   _answerB: Direct Laryngoscope
   _answerC: Fiber Optic scope

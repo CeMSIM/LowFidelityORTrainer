@@ -20,6 +20,7 @@ public class IntroScreenManager : MonoBehaviour
 
     private UIManager UI;
     private ExamPPEManager EPP;
+    private RSIManager RSI;
 
     public bool TutorialBool;
     void Start()
@@ -28,6 +29,7 @@ public class IntroScreenManager : MonoBehaviour
         //Acessing the UIManager Script
         UI = Manager.GetComponent<UIManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
+        RSI = Manager.GetComponent<RSIManager>();
     }
 
     // Update is called once per frame
@@ -56,8 +58,15 @@ public class IntroScreenManager : MonoBehaviour
         IntroScreen.gameObject.SetActive(false);
         Exam_Track.gameObject.SetActive(false);
         BeginDoffing.gameObject.SetActive(false);
-        EndDoffing.gameObject.SetActive(false);
+        //EndDoffing.gameObject.SetActive(false);
         EndDonning.SetActive(false);
+
+        RSI.IntubationScore.gameObject.SetActive(false);
+        RSI.ExtubationScore.gameObject.SetActive(false);
+        RSI.PostExtubationScore.gameObject.SetActive(false);
+        RSI.SGAScore.gameObject.SetActive(false);
+        RSI.PostSGAScore.gameObject.SetActive(false);
+        RSI.SGAExtubationScore.gameObject.SetActive(false);
        
         
         

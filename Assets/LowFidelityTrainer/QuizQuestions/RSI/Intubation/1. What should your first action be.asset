@@ -15,7 +15,7 @@ MonoBehaviour:
   _info: What should your first action be?
   _answerA: Apply high flow nasal oxygen
   _answerB: Preoxygenate as usual
-  _answerC: Administer anesthesia (induction) medications
+  _answerC: Administer Induction agents
   _answerD: None of the above
   _questText: The nurse is monitoring the patient and the secondary anesthesiologist
     is administering medication

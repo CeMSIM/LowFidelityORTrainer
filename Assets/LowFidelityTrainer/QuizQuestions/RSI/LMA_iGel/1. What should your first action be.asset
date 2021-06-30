@@ -15,7 +15,7 @@ MonoBehaviour:
   _info: What should your first action be?
   _answerA: 'Inflate the ETT cuff '
   _answerB: Preoxygenate as usual
-  _answerC: "Take the patient\u2019s pulse"
+  _answerC: Administer Induction agents
   _answerD: Apply the anesthesia medications
   _questText: The nurse is monitoring the patient and the second anesthesiologist
     is administering the drugs

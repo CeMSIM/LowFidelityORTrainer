@@ -48,7 +48,9 @@ public class ExamUIManager : MonoBehaviour
     public GameObject Undo;
     public GameObject Abutton;
 
-
+    public GameObject MedSelect1;
+    public GameObject MedSelect2;
+    public GameObject MedSelect3;
 
     // Start is called before the first frame update
     void Start()
@@ -167,6 +169,34 @@ public class ExamUIManager : MonoBehaviour
 
 
     // Checks to see if the question is answered correctly and deducts a point if the answer is incorrect
+
+    public void MedicationsCheckA()
+    {
+        MedSelect1.GetComponentInChildren<TextMeshProUGUI>().text = AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect2.GetComponentInChildren<TextMeshProUGUI>().text = AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect3.GetComponentInChildren<TextMeshProUGUI>().text = AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text;
+    }
+
+    public void MedicationsCheckB()
+    {
+        MedSelect1.GetComponentInChildren<TextMeshProUGUI>().text = AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect2.GetComponentInChildren<TextMeshProUGUI>().text = AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect3.GetComponentInChildren<TextMeshProUGUI>().text = AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text;
+    }
+
+    public void MedicationsCheckC()
+    {
+        MedSelect1.GetComponentInChildren<TextMeshProUGUI>().text = AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect2.GetComponentInChildren<TextMeshProUGUI>().text = AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect3.GetComponentInChildren<TextMeshProUGUI>().text = AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text;
+    }
+
+    public void MedicationsCheckD()
+    {
+        MedSelect1.GetComponentInChildren<TextMeshProUGUI>().text = AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect2.GetComponentInChildren<TextMeshProUGUI>().text = AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text;
+        MedSelect3.GetComponentInChildren<TextMeshProUGUI>().text = AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text;
+    }
     public void N95DonWrongD()
     {
 

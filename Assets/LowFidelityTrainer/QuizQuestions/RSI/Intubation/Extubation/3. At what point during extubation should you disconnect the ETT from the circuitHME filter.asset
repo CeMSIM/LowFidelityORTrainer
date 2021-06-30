@@ -15,8 +15,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info: At what point during extubation should you disconnect the ETT from the circuit/HME
     filter?
-  _answerA: When the ETT is still in the trachea
-  _answerB: Once the ETT is out of the mouth
+  _answerA: When the SGA or ETT is still inside the mouth
+  _answerB: Once the SGA or ETT is out of the mouth
   _answerC: Any point in the procedure
   _answerD: None of the above
   _questText: 

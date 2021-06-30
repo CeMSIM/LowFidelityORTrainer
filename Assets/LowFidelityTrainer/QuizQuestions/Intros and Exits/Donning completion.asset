@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
   m_Name: Donning completion
   m_EditorClassIdentifier: 
-  _info: 'ing sequence completed, now select End Donning to begin RSI and select
+  _info: 'Donning sequence completed, now select End Donning to begin RSI and select
     Begin Doffing once you have completed RSI '
   _answerA: 
   _answerB: 

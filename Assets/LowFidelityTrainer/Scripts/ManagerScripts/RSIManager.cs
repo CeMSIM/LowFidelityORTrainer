@@ -12,15 +12,20 @@ public class RSIManager : MonoBehaviour
     public UIManager UI;
     public ExamUIManager EUI;
     public IntroScreenManager IS;
+    private ExamPPEManager EPP;
 
     public GameObject Manager;
     public GameObject ExamManager;
 
     public int IQ;
+    public int IQQuestionNumber;
     public int SGA;
+    public int SGAQuestionNumber;
 
     public bool IQBool;
+    public bool IQFinalBool;
     public bool SGABool;
+    public bool SGAFinalBool;
 
     public GameObject RSIChoice;
 
@@ -32,6 +37,24 @@ public class RSIManager : MonoBehaviour
     public GameObject IntubationBG;
     public GameObject SGABG;
 
+    public int IntCorrectCount;
+    public int PostIntCorrectCount;
+    public int ExtCorrectCount;
+    public int SGACorrectCount;
+    public int PostSGACorrectCount;
+
+
+    public GameObject IntubationScore;
+    public GameObject ExtubationScore;
+    public GameObject PostExtubationScore;
+    public GameObject SGAScore;
+    public GameObject PostSGAScore;
+    public GameObject SGAExtubationScore;
+
+    public int z;
+
+
+    public GameObject ExtraExtQuestion;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +62,9 @@ public class RSIManager : MonoBehaviour
         IQ = 0;
         RSIChoice.gameObject.SetActive(false);
         IQBool = false;
+        IQFinalBool = false;
         SGABool = false;
+        SGAFinalBool = false;
 
         ExtubationResults.gameObject.SetActive(false);
         IntubationResults.gameObject.SetActive(false);
@@ -52,12 +77,26 @@ public class RSIManager : MonoBehaviour
         UI = Manager.GetComponent<UIManager>();
         EUI = ExamManager.GetComponent<ExamUIManager>();
         IS = Manager.GetComponent<IntroScreenManager>();
+        EPP = ExamManager.GetComponent<ExamPPEManager>();
+
+        IntCorrectCount = 0;
+        ExtCorrectCount = 0;
+        PostIntCorrectCount = 0;
+        SGACorrectCount = 0;
+        PostSGACorrectCount = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        SGAQuestionNumber = SGA + 1;
+        IQQuestionNumber = IQ + 1;
+        if (SGAFinalBool == true)
+        {
+            ExtraExtQuestion.gameObject.SetActive(false);
+        }
         if (IQBool == true && SGABool == false)
         {
             EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].Info;
@@ -67,7 +106,7 @@ public class RSIManager : MonoBehaviour
             EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerD;
             EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = "TBD";
+            EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = IQQuestionNumber.ToString();
             UI.AnswerButtons.gameObject.SetActive(true);
 
             SGAResults.gameObject.SetActive(false);
@@ -76,6 +115,10 @@ public class RSIManager : MonoBehaviour
 
         }
 
+        if (EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text == "")
+        {
+            UI.AnswerButtons.gameObject.SetActive(false);
+        }
 
         if (IQBool == false && SGABool == true)
         {
@@ -86,7 +129,7 @@ public class RSIManager : MonoBehaviour
             EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerD;
             EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = "TBD";
+            EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestionNumber.ToString();
             UI.AnswerButtons.gameObject.SetActive(true);
 
             IntubationBG.gameObject.SetActive(false);
@@ -97,18 +140,48 @@ public class RSIManager : MonoBehaviour
         //Manages buttons that access the RSI section in tutorial mode
 
 
-        if (UI.ChoicesInt == 15)
+        if (IS.TutorialBool == true)
         {
-            IS.EndDonning.gameObject.SetActive(true);
-            IS.BeginDoffing.gameObject.SetActive(true);
-        }
+            if (UI.ChoicesInt == 15 && EPP.ButtonActive == false)
+            {
+                IS.EndDonning.gameObject.SetActive(true);
+            }
+            else
+            {
+                IS.EndDonning.gameObject.SetActive(false);
+            }
 
+
+
+
+
+
+
+
+        }
+        
+
+
+
+        IntubationScore.GetComponentInChildren<TextMeshProUGUI>().text = IntCorrectCount.ToString() + "/4";
+        if (IQFinalBool == true)
+        {
+            ExtubationScore.GetComponentInChildren<TextMeshProUGUI>().text = ExtCorrectCount.ToString() + "/4";
+        }
+        else if ( SGAFinalBool == true)
+        {
+            ExtubationScore.GetComponentInChildren<TextMeshProUGUI>().text = ExtCorrectCount.ToString() + "/3";
+        }
+        PostExtubationScore.GetComponentInChildren<TextMeshProUGUI>().text = PostIntCorrectCount.ToString() + "/3";
+        SGAScore.GetComponentInChildren<TextMeshProUGUI>().text = SGACorrectCount.ToString() + "/3";
+        SGAExtubationScore.GetComponentInChildren<TextMeshProUGUI>().text = ExtCorrectCount.ToString() + "/4";
+        PostSGAScore.GetComponentInChildren<TextMeshProUGUI>().text = PostSGACorrectCount.ToString() + "/2";
 
     }
 
     public void ChangeIntubationQuestion()
     {
-        if (IQBool == true && IQ < 11 && IS.TutorialBool == false)
+        if (IQBool == true && IQ < 12 && IS.TutorialBool == false)
         {
             IQ += 1;
         }
@@ -126,12 +199,14 @@ public class RSIManager : MonoBehaviour
     {
         IQBool = true;
         RSIChoice.gameObject.SetActive(false);
+        IQFinalBool = true;
     }
 
     public void ChangeSGABool()
     {
         SGABool = true;
         RSIChoice.gameObject.SetActive(false);
+        SGAFinalBool = true;
 
     }
 
@@ -146,9 +221,15 @@ public class RSIManager : MonoBehaviour
         IntubationResults.gameObject.SetActive(false);
         PostExtubationResults.gameObject.SetActive(false);
         SGAResults.gameObject.SetActive(false);
-        PostSGAResults.gameObject.SetActive(false);
-        SGABG.gameObject.SetActive(true);
-        IntubationBG.gameObject.SetActive(true);
+        PostSGAResults.gameObject.SetActive(false);        
+        if (IQFinalBool == true)
+        {
+            IntubationBG.gameObject.SetActive(true);
+        }
+        else if (SGAFinalBool == true)
+        {
+            SGABG.gameObject.SetActive(true);
+        }
     }
 
 
@@ -190,5 +271,519 @@ public class RSIManager : MonoBehaviour
         PostSGAResults.gameObject.SetActive(false);
         IntubationBG.gameObject.SetActive(false);
         SGABG.gameObject.SetActive(false);
+    }
+
+
+
+
+    public void IntCorrectA()
+    {
+        for (int i = 0; i < UI.AnswersArrayA.Length; i++)
+        {
+            if (IQ >= 1 && IQ < 5)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            IntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+    public void IntCorrectB()
+    {
+        for (int i = 0; i < UI.AnswersArrayB.Length; i++)
+        {
+            if (IQ >= 1 && IQ < 5)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            IntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+    public void IntCorrectC()
+    {
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
+        {
+            if (IQ >= 1 && IQ < 5)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            IntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void IntCorrectD()
+    {
+        for (int i = 0; i < UI.AnswersArrayD.Length; i++)
+        {
+            if (IQ >= 1 && IQ < 5)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            IntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void ExtCorrectA()
+    {
+        for (int i = 0; i < UI.AnswersArrayA.Length; i++)
+        {
+            if (IQ >= 5 && IQ < 9)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+            else if (SGA >= 4 && SGA < 8)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            ExtCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+    public void ExtCorrectB()
+    {
+        for (int i = 0; i < UI.AnswersArrayB.Length; i++)
+        {
+            if (IQ >= 5 && IQ < 9)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+
+            }
+            else if (SGA >= 4 && SGA < 8)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            ExtCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void ExtCorrectC()
+    {
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
+        {
+            if (IQ >= 5 && IQ < 9)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+
+            }
+            else if (SGA >= 4 && SGA < 8)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            ExtCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void ExtCorrectD()
+    {
+        for (int i = 0; i < UI.AnswersArrayD.Length; i++)
+        {
+            if (IQ >= 5 && IQ < 9)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+            else if (SGA >= 4 && SGA < 8)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            ExtCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+
+
+
+    public void PostIntCorrectA()
+    {
+        for (int i = 0; i < UI.AnswersArrayA.Length; i++)
+        {
+            if (IQ >= 9 && IQ < 12)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostIntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostIntCorrectB()
+    {
+        for (int i = 0; i < UI.AnswersArrayB.Length; i++)
+        {
+            if (IQ >= 9 && IQ < 12)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostIntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostIntCorrectC()
+    {
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
+        {
+            if (IQ >= 9 && IQ < 12)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostIntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostIntCorrectD()
+    {
+        for (int i = 0; i < UI.AnswersArrayD.Length; i++)
+        {
+            if (IQ >= 9 && IQ < 12)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostIntCorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+
+
+
+    public void SGACorrectA()
+    {
+        for (int i = 0; i < UI.AnswersArrayA.Length; i++)
+        {
+            if (SGA >= 1 && SGA < 4)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            SGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void SGACorrectB()
+    {
+        for (int i = 0; i < UI.AnswersArrayB.Length; i++)
+        {
+            if (SGA >= 1 && SGA < 4)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            SGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void SGACorrectC()
+    {
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
+        {
+            if (SGA >= 1 && SGA < 4)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            SGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void SGACorrectD()
+    {
+        for (int i = 0; i < UI.AnswersArrayD.Length; i++)
+        {
+            if (SGA >= 1 && SGA < 4)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            SGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostSGACorrectA()
+    {
+        for (int i = 0; i < UI.AnswersArrayA.Length; i++)
+        {
+            if (SGA >= 8 && SGA < 10)
+            {
+                if (EUI.AnswerAText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayA[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostSGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostSGACorrectB()
+    {
+        for (int i = 0; i < UI.AnswersArrayB.Length; i++)
+        {
+            if (SGA >= 8 && SGA < 10)
+            {
+                if (EUI.AnswerBText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayB[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostSGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostSGACorrectC()
+    {
+        for (int i = 0; i < UI.AnswersArrayC.Length; i++)
+        {
+            if (SGA >= 8 && SGA < 10)
+            {
+                if (EUI.AnswerCText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayC[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostSGACorrectCount += 1;
+        }
+
+        z = 0;
+    }
+
+
+
+    public void PostSGACorrectD()
+    {
+        for (int i = 0; i < UI.AnswersArrayD.Length; i++)
+        {
+            if (SGA >= 8 && SGA < 10)
+            {
+                if (EUI.AnswerDText.GetComponentInParent<TextMeshProUGUI>().text == UI.AnswersArrayD[i])
+                {
+                    z += 1;
+                }
+            }
+
+        }
+
+        if (z == 1)
+        {
+            PostSGACorrectCount += 1;
+        }
+
+        z = 0;
     }
 }

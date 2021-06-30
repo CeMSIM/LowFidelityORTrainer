@@ -16,7 +16,7 @@ public class ExamPPEManager : MonoBehaviour
     private RSIManager RSIM;
 
     public bool Doffing;
-    private bool ButtonActive;
+    public bool ButtonActive;
 
     public bool N95Bool;
     public bool GownBool;
@@ -41,6 +41,9 @@ public class ExamPPEManager : MonoBehaviour
 
     public GameObject BeginDoff;
     public GameObject EndDonning;
+    public GameObject EndDoff;
+
+    public bool EndDonningBool;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +56,7 @@ public class ExamPPEManager : MonoBehaviour
         ButtonActive = true;
         HHBool = true;
 
+        EndDonningBool = false;
 
         Doffing = false;
 
@@ -68,16 +72,23 @@ public class ExamPPEManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
 
         if (UI.AnswerButtons.activeSelf)
         {
             ButtonActive = true;
+            //BeginDoff.gameObject.SetActive(false);
+            //EndDonning.gameObject.SetActive(false);
+            //EndDoff.gameObject.SetActive(false);
+           
+            
         }
         else
         {
             ButtonActive = false;
         }
+
 
 
 
@@ -175,6 +186,7 @@ public class ExamPPEManager : MonoBehaviour
     public void StartDoffing()
     {
         Doffing = true;
+        UI.BeginDoffBool = false;
         UI.DonningCheck.gameObject.SetActive(false);
         UI.DoffingCheck.gameObject.SetActive(true);
         N95Bool = true;
@@ -209,15 +221,22 @@ public class ExamPPEManager : MonoBehaviour
         HCBool = false;
         SCBool = false;
 
-
+        ButtonActive = true;
     }
 
     public void EndDoffing()
     {
         UI.FinalBG.gameObject.SetActive(true);
         CLM.ChecklistComparison.SetActive(true);
-        RSIM.IntubationBG.gameObject.SetActive(true);
-        RSIM.SGABG.gameObject.SetActive(true);
+        if (RSIM.IQFinalBool == true)
+        {
+            RSIM.IntubationBG.gameObject.SetActive(true);
+        }
+        else if (RSIM.SGAFinalBool == true)
+        {
+            RSIM.SGABG.gameObject.SetActive(true);
+        }
+        
         
     }
 
