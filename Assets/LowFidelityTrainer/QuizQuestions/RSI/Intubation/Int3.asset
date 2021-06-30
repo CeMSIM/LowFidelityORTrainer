@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbbe09ac88d2784e8e3646822262b22, type: 3}
+  m_Name: Int3
+  m_EditorClassIdentifier: 
+  _info: What should be done after the ETT cuff is inflated?
+  _answerA: Connect circuit to iGel and apply PPV as usual
+  _answerB: "Check the patient\u2019s pulse"
+  _answerC: Lightly squeeze the cuff to ensure it is inflated properly
+  _answerD: Connect circuit to ETT and apply PPV
+  _questText: 
+  _currentObject: 
+  _currentNumber: 

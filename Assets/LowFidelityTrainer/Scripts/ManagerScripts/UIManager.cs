@@ -447,6 +447,10 @@ public class UIManager : MonoBehaviour
               //  RSI.SGABG.gameObject.SetActive(true);
               //  FinalBG.gameObject.SetActive(true);
             }
+            else
+            {
+                EPP.EndDoff.gameObject.SetActive(false);
+            }
         }
             if (uIElements.AnswerAInfoTextObject.text == "")
             {
