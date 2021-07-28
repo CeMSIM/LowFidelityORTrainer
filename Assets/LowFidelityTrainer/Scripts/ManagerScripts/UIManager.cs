@@ -158,12 +158,14 @@ public class UIManager : MonoBehaviour
     public GameObject ColorManager;
     public GameObject Manager;
     public GameObject ExamManager;
+    public GameObject jsonManager;
 
     private ColorsManager ColorsM;
     private RSIManager RSI;
     private IntroScreenManager IS;
     private ExamPPEManager EPP;
     private ExamUIManager EUI;
+    private jsonParser jsonP;
     [Space]
     public bool BeginDoffBool;
     private void Start()
@@ -175,6 +177,7 @@ public class UIManager : MonoBehaviour
         IS = Manager.GetComponent<IntroScreenManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
         EUI = ExamManager.GetComponent<ExamUIManager>();
+        jsonP = jsonManager.GetComponent<jsonParser>();
 
         //Integer used to prevent UIManager and ExamUIManager from conflicting
         stop = 0;
@@ -464,14 +467,41 @@ public class UIManager : MonoBehaviour
             //Makes sure the questions change due to choices int only if in tutorial mode
         if (stop == 0)
         {
-            uIElements.QuestionInfoTextObject.text = TextInfo[ChoicesInt].Info;
-            uIElements.AnswerAInfoTextObject.text = TextInfo[ChoicesInt].AnswerA;
-            uIElements.AnswerBInfoTextObject.text = TextInfo[ChoicesInt].AnswerB;
-            uIElements.AnswerCInfoTextObject.text = TextInfo[ChoicesInt].AnswerC;
-            uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
-            uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
-            uIElements.CurrentObjectText.text = TextInfo[ChoicesInt].CurrentObject;
-            uIElements.CurrentNumberText.text = TextInfo[ChoicesInt].CurrentNumber;
+            if (ChoicesInt < 16)
+            {
+                uIElements.QuestionInfoTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].QuestionsText;
+                uIElements.AnswerAInfoTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].OptionA;
+                uIElements.AnswerBInfoTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].OptionB;
+                uIElements.AnswerCInfoTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].OptionC;
+                uIElements.AnswerDInfoTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].OptionD;
+                uIElements.QuestTextObject.text = jsonP.myDonningQuestions.Don[ChoicesInt].QuestText;
+                uIElements.CurrentObjectText.text = jsonP.myDonningQuestions.Don[ChoicesInt].CurrentObject;
+                uIElements.CurrentNumberText.text = jsonP.myDonningQuestions.Don[ChoicesInt].CurrentNumber;
+            }
+            else if (ChoicesInt > 15)
+            {
+                uIElements.QuestionInfoTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].QuestionsText;
+                uIElements.AnswerAInfoTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].OptionA;
+                uIElements.AnswerBInfoTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].OptionB;
+                uIElements.AnswerCInfoTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].OptionC;
+                uIElements.AnswerDInfoTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].OptionD;
+                uIElements.QuestTextObject.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].QuestText;
+                uIElements.CurrentObjectText.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].CurrentObject;
+                uIElements.CurrentNumberText.text = jsonP.myDoffingQuestions.Doff[ChoicesInt - 16].CurrentNumber;
+            }
+
+
+
+
+
+            //uIElements.QuestionInfoTextObject.text = TextInfo[ChoicesInt].Info;
+            //uIElements.AnswerAInfoTextObject.text = TextInfo[ChoicesInt].AnswerA;
+            //uIElements.AnswerBInfoTextObject.text = TextInfo[ChoicesInt].AnswerB;
+            //uIElements.AnswerCInfoTextObject.text = TextInfo[ChoicesInt].AnswerC;
+            //uIElements.AnswerDInfoTextObject.text = TextInfo[ChoicesInt].AnswerD;
+            //uIElements.QuestTextObject.text = TextInfo[ChoicesInt].QuestText;
+            //uIElements.CurrentObjectText.text = TextInfo[ChoicesInt].CurrentObject;
+            //uIElements.CurrentNumberText.text = TextInfo[ChoicesInt].CurrentNumber;
         }
 
 

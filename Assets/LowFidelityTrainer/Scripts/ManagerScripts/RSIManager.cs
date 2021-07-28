@@ -13,9 +13,12 @@ public class RSIManager : MonoBehaviour
     public ExamUIManager EUI;
     public IntroScreenManager IS;
     private ExamPPEManager EPP;
+    private jsonParser jsonP;
 
     public GameObject Manager;
     public GameObject ExamManager;
+    public GameObject jsonManager;
+
 
     public int IQ;
     public int IQQuestionNumber;
@@ -78,6 +81,7 @@ public class RSIManager : MonoBehaviour
         EUI = ExamManager.GetComponent<ExamUIManager>();
         IS = Manager.GetComponent<IntroScreenManager>();
         EPP = ExamManager.GetComponent<ExamPPEManager>();
+        jsonP = jsonManager.GetComponent<jsonParser>();
 
         IntCorrectCount = 0;
         ExtCorrectCount = 0;
@@ -99,14 +103,24 @@ public class RSIManager : MonoBehaviour
         }
         if (IQBool == true && SGABool == false)
         {
-            EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].Info;
-            EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerA;
-            EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerB;
-            EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerC;
-            EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerD;
-            EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = IQQuestionNumber.ToString();
+                EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myIntubationQuestions.Intubation[IQ].QuestionsText;
+                EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myIntubationQuestions.Intubation[IQ].OptionA;
+                EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myIntubationQuestions.Intubation[IQ].OptionB;
+                EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myIntubationQuestions.Intubation[IQ].OptionC;
+                EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myIntubationQuestions.Intubation[IQ].OptionD;
+                EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = IQQuestionNumber.ToString();
+
+
+            //EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].Info;
+            //EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerA;
+            //EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerB;
+            //EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerC;
+            //EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = IntubationQuestions[IQ].AnswerD;
+            //EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            //EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            //EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = IQQuestionNumber.ToString();
             UI.AnswerButtons.gameObject.SetActive(true);
 
             SGAResults.gameObject.SetActive(false);
@@ -122,14 +136,27 @@ public class RSIManager : MonoBehaviour
 
         if (IQBool == false && SGABool == true)
         {
-            EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].Info;
-            EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerA;
-            EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerB;
-            EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerC;
-            EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerD;
+
+            EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.mySGAIntubationQuestions.SGA[SGA].QuestionsText;
+            EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.mySGAIntubationQuestions.SGA[SGA].OptionA;
+            EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.mySGAIntubationQuestions.SGA[SGA].OptionB;
+            EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.mySGAIntubationQuestions.SGA[SGA].OptionC;
+            EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.mySGAIntubationQuestions.SGA[SGA].OptionD;
             EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
             EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestionNumber.ToString();
+
+
+
+
+            //EUI.QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].Info;
+            //EUI.AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerA;
+            //EUI.AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerB;
+            //EUI.AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerC;
+            //EUI.AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestions[SGA].AnswerD;
+            //EUI.QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            //EUI.CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            //EUI.NumberText.GetComponentInChildren<TextMeshProUGUI>().text = SGAQuestionNumber.ToString();
             UI.AnswerButtons.gameObject.SetActive(true);
 
             IntubationBG.gameObject.SetActive(false);

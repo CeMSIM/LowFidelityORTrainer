@@ -44001,6 +44001,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2060140748}
+        m_MethodName: LoadLocalizedText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IntubationQuestion0.json
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1583635473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46641,6 +46652,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1720356211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720356213}
+  - component: {fileID: 1720356212}
+  m_Layer: 0
+  m_Name: jsonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1720356212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720356211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee0042d59749e941a26fe0ec9b96dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PPEDonQs: {fileID: 4900000, guid: 3494946e9c208c24698d6bb3abd4ffb2, type: 3}
+  PPEDoffQs: {fileID: 4900000, guid: ef5ca665fe9169e4eb6af039a80a6569, type: 3}
+  IntQs: {fileID: 4900000, guid: 637f7bc60a82ad149a4c35ea43769251, type: 3}
+  SGAQs: {fileID: 4900000, guid: 3326aa2ba1afae64e9b6bbe7a4b2efae, type: 3}
+  test: []
+  myDonningQuestions:
+    Don: []
+  myDoffingQuestions:
+    Doff: []
+  myIntubationQuestions:
+    Intubation: []
+  mySGAIntubationQuestions:
+    SGA: []
+--- !u!4 &1720356213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720356211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 214.1911, y: 213.45845, z: -47.156616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722246285
 GameObject:
@@ -52869,6 +52936,7 @@ MonoBehaviour:
   ExamChoicesInt: 0
   Managers: {fileID: 2060140742}
   ExamManagers: {fileID: 1945175509}
+  jsonManager: {fileID: 1720356211}
   AnswerAText: {fileID: 2040954319}
   AnswerBText: {fileID: 866174533}
   AnswerCText: {fileID: 285290151}
@@ -55564,6 +55632,7 @@ GameObject:
   - component: {fileID: 2060140745}
   - component: {fileID: 2060140746}
   - component: {fileID: 2060140747}
+  - component: {fileID: 2060140748}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -55756,6 +55825,7 @@ MonoBehaviour:
   ColorManager: {fileID: 1715703799}
   Manager: {fileID: 2060140742}
   ExamManager: {fileID: 1945175509}
+  jsonManager: {fileID: 1720356211}
   BeginDoffBool: 0
 --- !u!4 &2060140744
 Transform:
@@ -56007,6 +56077,7 @@ MonoBehaviour:
   IS: {fileID: 0}
   Manager: {fileID: 2060140742}
   ExamManager: {fileID: 1945175509}
+  jsonManager: {fileID: 1720356211}
   IQ: 0
   IQQuestionNumber: 0
   SGA: 0
@@ -56036,6 +56107,19 @@ MonoBehaviour:
   SGAExtubationScore: {fileID: 1506067291}
   z: 0
   ExtraExtQuestion: {fileID: 44839560}
+--- !u!114 &2060140748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060140742}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4226a07f906a415488ffd5730671b3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Manager: {fileID: 2060140742}
 --- !u!1 &2060882266
 GameObject:
   m_ObjectHideFlags: 0

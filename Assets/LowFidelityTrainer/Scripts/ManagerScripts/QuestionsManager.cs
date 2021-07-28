@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
+
+
+
 [System.Serializable]
 
 [CreateAssetMenu(fileName = "New Question", menuName = "Quiz/new Question")]
@@ -46,7 +52,8 @@ public class QuestionsManager : ScriptableObject
     [SerializeField] private string _currentNumber;
     public string CurrentNumber { get { return _currentNumber; } }
 
-
+    
+    
     //Code for a timer if we decide too add one
 
     // [SerializeField] private bool _useTimer = false;
@@ -58,3 +65,49 @@ public class QuestionsManager : ScriptableObject
 
 
 }
+
+
+namespace SerializeJson
+{
+    class QM
+    {
+        static void Main(string[] args)
+        {
+            Question question1 = new Question();
+
+            QuestionsManager QM = new QuestionsManager();
+            question1.QuestionsText = QM.Info;
+            question1.OptionA = QM.AnswerA;
+            question1.OptionB = QM.AnswerB;
+            question1.OptionC = QM.AnswerC;
+            question1.OptionD = QM.AnswerD;
+            question1.QuestText = QM.QuestText;
+            question1.CurrentObject = QM.CurrentObject;
+            question1.CurrentNumber = QM.CurrentNumber;
+
+
+            string json = JsonUtility.ToJson(question1);
+            Debug.Log(json);
+        }
+    }
+
+    public class Question
+    {
+        public string item;
+        public string QuestionsText;
+        public string OptionA;
+        public string OptionB;
+        public string OptionC;
+        public string OptionD;
+        public string QuestText;
+        public string CurrentObject;
+        public string CurrentNumber;
+
+        
+    }
+}
+
+
+
+
+

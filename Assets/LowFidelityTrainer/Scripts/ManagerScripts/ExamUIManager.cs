@@ -14,10 +14,11 @@ public class ExamUIManager : MonoBehaviour
     private UIManager UI;
     private ExamPPEManager EPP;
     private RSIManager RSIM;
+    private jsonParser jsonP;
 
     public GameObject Managers;
     public GameObject ExamManagers;
-
+    public GameObject jsonManager;
     private QuestionsManager[] TextInfo;
 
     public GameObject AnswerAText;
@@ -67,6 +68,7 @@ public class ExamUIManager : MonoBehaviour
         UI = Managers.GetComponent<UIManager>();
         EPP = ExamManagers.GetComponent<ExamPPEManager>();
         RSIM = Managers.GetComponent<RSIManager>();
+        jsonP = jsonManager.GetComponent<jsonParser>();
 
 
         ExamChoicesInt = 0;
@@ -109,15 +111,38 @@ public class ExamUIManager : MonoBehaviour
 
 
         //Setting the answer choices and infotexts to the array of scriptable objects
+        if (ExamChoicesInt < 16)
+        {
+            QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].QuestionsText;
+            AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].OptionA;
+            AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].OptionB;
+            AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].OptionC;
+            AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].OptionD;
+            QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Select the items to don and answer the associated questions. When you have selected all the PPE needed, press Finish";
+            CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            NumberText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDonningQuestions.Don[ExamChoicesInt].CurrentNumber;
+        }
+        else if (ExamChoicesInt >15)
+        {
+            QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].QuestionsText;
+            AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].OptionA;
+            AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].OptionB;
+            AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].OptionC;
+            AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].OptionD;
+            QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Select the items to don and answer the associated questions. When you have selected all the PPE needed, press Finish";
+            CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            NumberText.GetComponentInChildren<TextMeshProUGUI>().text = jsonP.myDoffingQuestions.Doff[ExamChoicesInt - 16].CurrentNumber;
+        }
 
-        QuestionInfoTextObject.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].Info;
-        AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerA;
-        AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerB;
-        AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerC;
-        AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerD;
-        QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Select the items to don and answer the associated questions. When you have selected all the PPE needed, press Finish";
-        CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
-        NumberText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].CurrentNumber;
+
+
+        //AnswerAText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerA;
+        //AnswerBText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerB;
+        //AnswerCText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerC;
+        //AnswerDText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].AnswerD;
+        //QuestText.GetComponentInChildren<TextMeshProUGUI>().text = "Select the items to don and answer the associated questions. When you have selected all the PPE needed, press Finish";
+        //CurrentPPE.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        //NumberText.GetComponentInChildren<TextMeshProUGUI>().text = UI.TextInfo[ExamChoicesInt].CurrentNumber;
 
 
 
